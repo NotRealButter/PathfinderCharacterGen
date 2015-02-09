@@ -4,14 +4,16 @@ package pathfindercharactergenerator;
  *
  * @author Stephen Hite
  */
-public class Feat 
+public class ArmorClass
 {
     String name;
+    int value;
     String description;
     
-    Feat()
+    ArmorClass()
     {
         
     }
+    
     
 }

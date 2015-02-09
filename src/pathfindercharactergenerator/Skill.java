@@ -4,12 +4,13 @@ package pathfindercharactergenerator;
  *
  * @author Stephen Hite
  */
-public class Feat 
+public class Skill
 {
     String name;
-    String description;
+    int value;
+    Boolean trained;
     
-    Feat()
+    Skill()
     {
         
     }

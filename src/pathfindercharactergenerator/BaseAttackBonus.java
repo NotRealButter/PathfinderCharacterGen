@@ -4,14 +4,14 @@ package pathfindercharactergenerator;
  *
  * @author Stephen Hite
  */
-public class Feat 
+public class BaseAttackBonus 
 {
     String name;
-    String description;
+    int value;
+    Boolean available;
     
-    Feat()
+    BaseAttackBonus()
     {
         
     }
-    
 }

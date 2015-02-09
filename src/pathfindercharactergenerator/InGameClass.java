@@ -4,6 +4,16 @@ package pathfindercharactergenerator;
  *
  * @author Stephen Hite
  */
-public class InGameClass {
+public class InGameClass 
+{
+    String name;
+    int classID;
+    Skill trainedSkills;
+    Dice hitDie;
+    
+    InGameClass()
+        {
+        
+        }
     
 }

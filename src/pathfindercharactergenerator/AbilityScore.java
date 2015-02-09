@@ -4,12 +4,12 @@ package pathfindercharactergenerator;
  *
  * @author Stephen Hite
  */
-public class Feat 
+public class AbilityScore 
 {
     String name;
-    String description;
+    int value;
     
-    Feat()
+    AbilityScore()
     {
         
     }

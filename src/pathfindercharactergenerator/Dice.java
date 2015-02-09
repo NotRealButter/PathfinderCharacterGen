@@ -4,12 +4,12 @@ package pathfindercharactergenerator;
  *
  * @author Stephen Hite
  */
-public class Feat 
+public class Dice
 {
     String name;
-    String description;
+    int numOfSides;
     
-    Feat()
+    Dice()
     {
         
     }
