@@ -14,6 +14,9 @@ public class Character
     String gender;
     String alignment;
     Race race;
+    int height;
+    int weight;
+    Feat feats;
     
     
 }
