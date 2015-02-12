@@ -4,7 +4,7 @@ public class app
 {
     public static void main(String[] args)  
     {
-        MenuCtrl mainMenu = new MenuCtrl();
+        MyJFrame frame = new MyJFrame();
     }
     
 }
