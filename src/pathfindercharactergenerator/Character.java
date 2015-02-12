@@ -1,9 +1,5 @@
 package pathfindercharactergenerator;
 
-/**
- *
- * @author Stephen Hite
- */
 public class Character
 {
     private String name;
