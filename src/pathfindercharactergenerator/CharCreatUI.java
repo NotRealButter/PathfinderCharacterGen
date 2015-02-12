@@ -20,7 +20,7 @@ public class CharCreatUI extends myJPanel
     CharCreatUI()
     {
         setBackground(Color.blue);
-        this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
+        this.setLayout(new GridLayout(9,9));
 
         raceBox = new JComboBox(race);
         raceBox.addActionListener(new BoxListener());
