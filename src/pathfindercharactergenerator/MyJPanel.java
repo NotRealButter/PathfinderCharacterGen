@@ -2,9 +2,9 @@ package pathfindercharactergenerator;
 
 import javax.swing.*;
 
-public class myJPanel extends JPanel 
+public class MyJPanel extends JPanel 
 {
-    public myJPanel()
+    public MyJPanel()
     {
         
     }
