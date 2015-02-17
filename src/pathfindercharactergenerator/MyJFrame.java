@@ -6,11 +6,13 @@ public class MyJFrame extends JFrame
 {
 
     int frameWidth = 1005  , frameHeight = 730;
-            
-    public myJFrame ()
+    MenuCntl mainMenu;
+    
+    public MyJFrame ()
     {
             super ("Pathfinder");
             
+            mainMenu = new MenuCntl(this);
             setDefaultCloseOperation(EXIT_ON_CLOSE);
             setResizable(false);
             setSize (frameWidth, frameHeight);

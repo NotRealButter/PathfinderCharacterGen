@@ -6,7 +6,7 @@ import java.awt.event.ActionListener;
 import javax.swing.*;
 
 
-public class CharCreatUI extends myJPanel
+public class CharCreatUI extends MyJPanel
 {
     JComboBox raceBox, inGameClassBox, genderBox, alignmentBox;
     JTextField name, age, height, weight;

@@ -18,7 +18,7 @@ public class MenuCntl implements ActionListener
     {
         this.frame = frame;
         this.frame.add(mainMenu);
-        mainMenu.b1.addActionListener(this);
+        mainMenu.charCreateButton.addActionListener(this);
         charCreatUI.back.addActionListener(this);
         charCreatCntl = new CharCreatCntl(this);
     }
@@ -40,7 +40,7 @@ public class MenuCntl implements ActionListener
     public void actionPerformed(ActionEvent e) 
     {
         Object select = e.getSource();
-        if(select == mainMenu.b1)
+        if(select == mainMenu.charCreateButton)
         {
            switchPanel(mainMenu, charCreatUI);
         }
