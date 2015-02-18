@@ -49,9 +49,6 @@ public class MenuCntl implements ActionListener
             switchPanel(charCreatUI, mainMenu);
         }
              
-        
-                
-                
     }
 
    
