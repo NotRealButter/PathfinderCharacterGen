@@ -9,13 +9,19 @@ package pathfindercharactergenerator;
  *
  * @author Stephen
  */
-public class CharCreatUI extends javax.swing.JPanel {
-
+public class CharCreatUI extends javax.swing.JPanel 
+{
+    String[] race = {"-RACE-","Human" , "Elf" , "Orc", "Halfling"};
+    String[] gender = {"-GENDER-","Male", "Female", "Both", "Neither", "Not Applicable"};
+    String[] alignment = {"-ALIGNMENT-","Lawful Good","Neutral Good", "Chaotic Good", "Lawful Neutral"," True Neutral", "Chaotic Neutral","Lawful Evil","Neutral Evil","Chaotic Evil"};
+    String[] inGameClass = {"-CLASS-","Barbarian","Bard","Cleric","Druid","Fighter","Monk","Paladin","Ranger","Rogue","Sorceror","Wizard"};
+   
     /**
      * Creates new form CharCreatUI1
      */
     public CharCreatUI() {
         initComponents();
+
     }
 
     /**
@@ -27,56 +33,88 @@ public class CharCreatUI extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
-        name = new javax.swing.JTextArea();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        height = new javax.swing.JTextArea();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        weight = new javax.swing.JTextArea();
-        jScrollPane4 = new javax.swing.JScrollPane();
-        age = new javax.swing.JTextArea();
         inGameClassBox = new javax.swing.JComboBox();
         genderBox = new javax.swing.JComboBox();
         raceBox = new javax.swing.JComboBox();
         alignmentBox = new javax.swing.JComboBox();
         back = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        name = new javax.swing.JTextField();
+        next = new javax.swing.JButton();
+        age = new javax.swing.JSpinner();
+        height = new javax.swing.JSpinner();
+        weight = new javax.swing.JSpinner();
 
         setMaximumSize(new java.awt.Dimension(1280, 720));
         setMinimumSize(new java.awt.Dimension(1280, 720));
 
-        name.setColumns(20);
-        name.setRows(5);
-        jScrollPane1.setViewportView(name);
-
-        height.setColumns(20);
-        height.setRows(5);
-        jScrollPane2.setViewportView(height);
-
-        weight.setColumns(20);
-        weight.setRows(5);
-        jScrollPane3.setViewportView(weight);
-
-        age.setColumns(20);
-        age.setRows(5);
-        jScrollPane4.setViewportView(age);
-
-        inGameClassBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        inGameClassBox.setModel(new javax.swing.DefaultComboBoxModel(inGameClass));
         inGameClassBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 inGameClassBoxActionPerformed(evt);
             }
         });
 
-        genderBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        genderBox.setModel(new javax.swing.DefaultComboBoxModel(gender));
+        genderBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                genderBoxActionPerformed(evt);
+            }
+        });
 
-        raceBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        raceBox.setModel(new javax.swing.DefaultComboBoxModel(race));
 
-        alignmentBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        alignmentBox.setModel(new javax.swing.DefaultComboBoxModel(alignment));
 
-        back.setText("jButton1");
+        back.setText("Back");
         back.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setFont(new java.awt.Font("Eras Bold ITC", 0, 14)); // NOI18N
+        jLabel1.setText("Name:");
+
+        jLabel2.setFont(new java.awt.Font("Eras Bold ITC", 0, 14)); // NOI18N
+        jLabel2.setText("Age:");
+
+        jLabel3.setFont(new java.awt.Font("Eras Bold ITC", 0, 14)); // NOI18N
+        jLabel3.setText("Weight:");
+
+        jLabel4.setFont(new java.awt.Font("Eras Bold ITC", 0, 14)); // NOI18N
+        jLabel4.setText("Height:");
+
+        jLabel5.setFont(new java.awt.Font("Eras Bold ITC", 0, 14)); // NOI18N
+        jLabel5.setText("Class:");
+
+        jLabel6.setFont(new java.awt.Font("Eras Bold ITC", 0, 14)); // NOI18N
+        jLabel6.setText("Race:");
+
+        jLabel7.setFont(new java.awt.Font("Eras Bold ITC", 0, 14)); // NOI18N
+        jLabel7.setText("Gender:");
+
+        jLabel8.setFont(new java.awt.Font("Eras Bold ITC", 0, 14)); // NOI18N
+        jLabel8.setText("Alignment:");
+
+        name.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
+        name.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nameActionPerformed(evt);
+            }
+        });
+
+        next.setText("Next");
+        next.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nextActionPerformed(evt);
             }
         });
 
@@ -84,63 +122,90 @@ public class CharCreatUI extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(360, 360, 360)
-                        .addComponent(alignmentBox, 0, 724, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(360, 360, 360)
-                        .addComponent(genderBox, 0, 724, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(360, 360, 360)
-                        .addComponent(raceBox, 0, 724, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(360, 360, 360)
-                        .addComponent(inGameClassBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(back)
                 .addGap(564, 564, 564))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(age, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(height, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(335, 335, 335)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(genderBox, 0, 848, Short.MAX_VALUE)
+                            .addComponent(inGameClassBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel4)
+                            .addComponent(name, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel3)
+                            .addComponent(weight, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(130, 130, 130)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(alignmentBox, 0, 823, Short.MAX_VALUE)
+                                .addGap(25, 25, 25))
+                            .addComponent(raceBox, 0, 848, Short.MAX_VALUE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel8)
+                                    .addComponent(jLabel5)
+                                    .addComponent(jLabel7)
+                                    .addComponent(jLabel6))
+                                .addGap(0, 0, Short.MAX_VALUE)))))
+                .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(377, 377, 377)
+                .addComponent(next)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(64, 64, 64)
+                .addGap(39, 39, 39)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel6))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(raceBox, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(name, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(66, 66, 66)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel5))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(raceBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                    .addComponent(age, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(inGameClassBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(26, 26, 26)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(jLabel7))
+                .addGap(6, 6, 6)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(20, 20, 20)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(alignmentBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(175, 175, 175)
-                                        .addComponent(back)
-                                        .addGap(91, 91, 91))))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(genderBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE))))
+                        .addComponent(height, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(45, 45, 45)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel8))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(alignmentBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(weight, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 194, Short.MAX_VALUE)
+                        .addComponent(next)
+                        .addGap(53, 53, 53))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(inGameClassBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))))
+                        .addComponent(genderBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(back))))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -152,20 +217,96 @@ public class CharCreatUI extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_backActionPerformed
 
+    private void genderBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_genderBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_genderBoxActionPerformed
+
+    private void nameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nameActionPerformed
+
+    private void nextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nextActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JTextArea age;
+    public javax.swing.JSpinner age;
     public javax.swing.JComboBox alignmentBox;
     public javax.swing.JButton back;
     public javax.swing.JComboBox genderBox;
-    public javax.swing.JTextArea height;
+    public javax.swing.JSpinner height;
     public javax.swing.JComboBox inGameClassBox;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JScrollPane jScrollPane4;
-    public javax.swing.JTextArea name;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    public javax.swing.JTextField name;
+    public javax.swing.JButton next;
     public javax.swing.JComboBox raceBox;
-    public javax.swing.JTextArea weight;
+    public javax.swing.JSpinner weight;
     // End of variables declaration//GEN-END:variables
+
+
+    /**
+     * @return the alignmentBox
+     */
+    public javax.swing.JComboBox getAlignmentBox() {
+        return alignmentBox;
+    }
+
+    /**
+     * @param alignmentBox the alignmentBox to set
+     */
+    public void setAlignmentBox(javax.swing.JComboBox alignmentBox) {
+        this.alignmentBox = alignmentBox;
+    }
+
+    /**
+     * @return the genderBox
+     */
+    public javax.swing.JComboBox getGenderBox() {
+        return genderBox;
+    }
+
+    /**
+     * @param genderBox the genderBox to set
+     */
+    public void setGenderBox(javax.swing.JComboBox genderBox) {
+        this.genderBox = genderBox;
+    }
+
+ 
+    /**
+     * @return the raceBox
+     */
+    public javax.swing.JComboBox getRaceBox() {
+        return raceBox;
+    }
+
+    /**
+     * @param raceBox the raceBox to set
+     */
+    public void setRaceBox(javax.swing.JComboBox raceBox) {
+        this.raceBox = raceBox;
+    }
+
+    /**
+     * @return the inGameClassBox
+     */
+    public javax.swing.JComboBox getInGameClassBox() {
+        return inGameClassBox;
+    }
+
+    /**
+     * @param inGameClassBox the inGameClassBox to set
+     */
+    public void setInGameClassBox(javax.swing.JComboBox inGameClassBox) {
+        this.inGameClassBox = inGameClassBox;
+    }
+
 }
