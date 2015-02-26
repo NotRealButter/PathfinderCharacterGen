@@ -10,6 +10,7 @@ public class CharCreatCntl
     MenuCntl menuCntl;
     CharCreatUI charCreateUI;
     AbilityScoreUI abilityScoreUI;
+    InGameClassUI inGameClassUI;
     Character character;
     Dice dice;
     
@@ -20,6 +21,7 @@ public class CharCreatCntl
         this.menuCntl = menuCntl;
         charCreateUI = new CharCreatUI();
         abilityScoreUI = new AbilityScoreUI();
+        inGameClassUI = new InGameClassUI();
         character = new Character();
         dice = new Dice();
         
@@ -50,6 +52,7 @@ public class CharCreatCntl
         character.setHeight((int)charCreateUI.height.getValue());
         character.setWeight((int)charCreateUI.weight.getValue());
     }
+
     
  class BoxListener implements ActionListener
     {
@@ -81,6 +84,7 @@ public class CharCreatCntl
         public void actionPerformed(ActionEvent e)
         {
             Object select = e.getSource();
+            //AbilityScoreRollers**********************************************
             if (select == abilityScoreUI.chaRoll)
             {
                 abilityScoreUI.chaBox.setText(""+dice.abilityScoreRoll());
@@ -105,6 +109,8 @@ public class CharCreatCntl
             {
                 abilityScoreUI.conBox.setText(""+dice.abilityScoreRoll());
             }
+                 
+            //HandlesTheInGameClassUI*******************************************
         }
      
  }
