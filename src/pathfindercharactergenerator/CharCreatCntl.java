@@ -39,10 +39,25 @@ public class CharCreatCntl
         abilityScoreUI.intRoll.addActionListener(new ButtonListener());
         abilityScoreUI.conRoll.addActionListener(new ButtonListener());
         abilityScoreUI.wisRoll.addActionListener(new ButtonListener());
-
-        
-
-      
+        inGameClassUI.getSelectBard().addActionListener(new ButtonListener());
+        inGameClassUI.getSelectBarbarian().addActionListener(new ButtonListener());
+        inGameClassUI.getSelectCleric().addActionListener(new ButtonListener());
+        inGameClassUI.getSelectDruid().addActionListener(new ButtonListener());
+        inGameClassUI.getSelectFighter().addActionListener(new ButtonListener());
+        inGameClassUI.getSelectMonk().addActionListener(new ButtonListener());
+        inGameClassUI.getSelectPaladin().addActionListener(new ButtonListener());
+        inGameClassUI.getSelectRanger().addActionListener(new ButtonListener());
+        inGameClassUI.getSelectRogue().addActionListener(new ButtonListener());
+        inGameClassUI.getSelectSorceror().addActionListener(new ButtonListener());
+        inGameClassUI.getSelectWizard().addActionListener(new ButtonListener());
+        inGameClassUI.getSelectAlchemist().addActionListener(new ButtonListener());
+        inGameClassUI.getSelectCavalier().addActionListener(new ButtonListener());
+        inGameClassUI.getSelectInquisitor().addActionListener(new ButtonListener());
+        inGameClassUI.getSelectMagus().addActionListener(new ButtonListener());
+        inGameClassUI.getSelectOracle().addActionListener(new ButtonListener());
+        inGameClassUI.getSelectSummoner().addActionListener(new ButtonListener());
+        inGameClassUI.getSelectWitch().addActionListener(new ButtonListener());
+        inGameClassUI.getSelectCustom().addActionListener(new ButtonListener());
     }
     
     public void onCreateNextClick()
@@ -54,7 +69,7 @@ public class CharCreatCntl
     }
 
     
- class BoxListener implements ActionListener
+    class BoxListener implements ActionListener
     {
 
         @Override
@@ -73,13 +88,12 @@ public class CharCreatCntl
             {
                 charCreateUI.getAlignmentBox().setEnabled(true);
             }
-           
-        }
-        
-    }
- class ButtonListener implements ActionListener
- {
 
+        }
+
+    }
+    class ButtonListener implements ActionListener
+    {
         @Override
         public void actionPerformed(ActionEvent e)
         {
@@ -109,9 +123,85 @@ public class CharCreatCntl
             {
                 abilityScoreUI.conBox.setText(""+dice.abilityScoreRoll());
             }
-                 
-            //HandlesTheInGameClassUI*******************************************
+        //HandlesTheInGameClassUI*******************************************
+            if(select == inGameClassUI.getSelectCustom())
+            {
+                inGameClassUI.setClassChosen(0);
+            }
+            if(select == inGameClassUI.getSelectBard())
+            {
+                inGameClassUI.setClassChosen(2);
+            }
+            if(select == inGameClassUI.getSelectBarbarian())
+            {
+                inGameClassUI.setClassChosen(1);
+            }
+            if(select == inGameClassUI.getSelectCleric())
+            {
+                inGameClassUI.setClassChosen(3);
+            }
+            if(select == inGameClassUI.getSelectDruid())
+            {
+                inGameClassUI.setClassChosen(4);
+            }
+            if (select == inGameClassUI.getSelectFighter())
+            {
+                inGameClassUI.setClassChosen(5);
+            }
+            if(select ==  inGameClassUI.getSelectMonk())
+            {
+                inGameClassUI.setClassChosen(6);
+            }
+            if (select == inGameClassUI.getSelectPaladin())
+            {
+                inGameClassUI.setClassChosen(7);
+            }
+            if (select == inGameClassUI.getSelectRanger())
+            {
+                inGameClassUI.setClassChosen(8);
+            }
+            if (select ==  inGameClassUI.getSelectRogue())
+            {
+                inGameClassUI.setClassChosen(9);
+            }
+            if( select == inGameClassUI.getSelectSorceror())
+            {
+                inGameClassUI.setClassChosen(10);
+            }
+            if (select == inGameClassUI.getSelectWizard())
+            {
+                inGameClassUI.setClassChosen(11);
+            }
+            if (select == inGameClassUI.getSelectAlchemist())
+            {
+                inGameClassUI.setClassChosen(12);
+            }
+            if(select == inGameClassUI.getSelectCavalier())
+            {
+                inGameClassUI.setClassChosen(13);
+            }
+            if(select == inGameClassUI.getSelectInquisitor())
+            {
+                inGameClassUI.setClassChosen(14);
+            }
+            if(select == inGameClassUI.getSelectMagus())
+            {
+                inGameClassUI.setClassChosen(15);
+            }
+            if (select == inGameClassUI.getSelectOracle())
+            {
+                inGameClassUI.setClassChosen(16);
+            }
+            if (select == inGameClassUI.getSelectSummoner())
+            {
+                inGameClassUI.setClassChosen(17);
+            }
+            if (select == inGameClassUI.getSelectWitch())
+            {
+                inGameClassUI.setClassChosen(18);
+            }
+
+
         }
-     
- }
+    }
 }

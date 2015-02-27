@@ -45,6 +45,7 @@ public class AbilityScoreUI extends javax.swing.JPanel {
         intRoll = new javax.swing.JButton();
         wisRoll = new javax.swing.JButton();
         chaRoll = new javax.swing.JButton();
+        next = new javax.swing.JButton();
         back = new javax.swing.JButton();
 
         setMaximumSize(new java.awt.Dimension(1005, 730));
@@ -118,7 +119,20 @@ public class AbilityScoreUI extends javax.swing.JPanel {
             }
         });
 
+        next.setText("Next");
+        next.setMaximumSize(new java.awt.Dimension(100, 100));
+        next.setMinimumSize(new java.awt.Dimension(100, 100));
+        next.setPreferredSize(new java.awt.Dimension(100, 100));
+        next.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nextActionPerformed(evt);
+            }
+        });
+
         back.setText("Back");
+        back.setMaximumSize(new java.awt.Dimension(100, 100));
+        back.setMinimumSize(new java.awt.Dimension(100, 100));
+        back.setPreferredSize(new java.awt.Dimension(100, 100));
         back.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backActionPerformed(evt);
@@ -129,10 +143,6 @@ public class AbilityScoreUI extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(633, Short.MAX_VALUE)
-                .addComponent(back)
-                .addGap(318, 318, 318))
             .addGroup(layout.createSequentialGroup()
                 .addGap(31, 31, 31)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -160,7 +170,12 @@ public class AbilityScoreUI extends javax.swing.JPanel {
                     .addComponent(intRoll)
                     .addComponent(wisRoll)
                     .addComponent(chaRoll))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(713, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(next, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(35, 35, 35)
+                .addComponent(back, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -195,15 +210,16 @@ public class AbilityScoreUI extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wisBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(wisRoll))
-                .addGap(17, 17, 17)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(back)
-                    .addComponent(jLabel6))
+                .addGap(26, 26, 26)
+                .addComponent(jLabel6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(chaBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(chaRoll))
-                .addContainerGap(135, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(back, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(next, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -231,6 +247,10 @@ public class AbilityScoreUI extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_chaRollActionPerformed
 
+    private void nextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nextActionPerformed
+
     private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_backActionPerformed
@@ -252,6 +272,7 @@ public class AbilityScoreUI extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    public javax.swing.JButton next;
     public javax.swing.JTextField strBox;
     public javax.swing.JButton strRoll;
     public javax.swing.JTextField wisBox;

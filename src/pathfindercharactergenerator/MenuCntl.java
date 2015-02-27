@@ -47,6 +47,7 @@ public class MenuCntl implements ActionListener
         {
            switchPanel(mainMenu, charCreateCntl.charCreateUI);
         }
+        if
         if(select == charCreateCntl.charCreateUI.back)
         {
             switchPanel(charCreateCntl.charCreateUI, mainMenu);
@@ -57,12 +58,15 @@ public class MenuCntl implements ActionListener
         }
         if(select == charCreateCntl.charCreateUI.next)
         {
-            switchPanel(charCreateCntl.charCreateUI, charCreateCntl.abilityScoreUI);
+            switchPanel(charCreateCntl.charCreateUI, charCreateCntl.inGameClassUI);
         }
         if (select == charCreateCntl.abilityScoreUI.chaRoll)
         {
             switchPanel(charCreateCntl.abilityScoreUI, charCreateCntl.charCreateUI);
-
+        }
+        if (select == charCreateCntl.charCreateUI.next)
+        {
+            switchPanel(charCreateCntl.charCreateUI, charCreateCntl.abilityScoreUI);
         }
              
     }
