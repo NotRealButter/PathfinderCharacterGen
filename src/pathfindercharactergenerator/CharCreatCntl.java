@@ -52,6 +52,7 @@ public class CharCreatCntl
         inGameClassUI.getSelectWizard().addActionListener(new ButtonListener());
         inGameClassUI.getSelectAlchemist().addActionListener(new ButtonListener());
         inGameClassUI.getSelectCavalier().addActionListener(new ButtonListener());
+        inGameClassUI.getSelectGunslinger().addActionListener(new ButtonListener());
         inGameClassUI.getSelectInquisitor().addActionListener(new ButtonListener());
         inGameClassUI.getSelectMagus().addActionListener(new ButtonListener());
         inGameClassUI.getSelectOracle().addActionListener(new ButtonListener());
@@ -66,6 +67,11 @@ public class CharCreatCntl
         character.setAge((int)charCreateUI.age.getValue());
         character.setHeight((int)charCreateUI.height.getValue());
         character.setWeight((int)charCreateUI.weight.getValue());
+    }
+    
+    public void onClassNextClick()
+    {
+        
     }
 
     
@@ -127,81 +133,103 @@ public class CharCreatCntl
             if(select == inGameClassUI.getSelectCustom())
             {
                 inGameClassUI.setClassChosen(0);
+                inGameClassUI.getDescriptionLabel().setText("Choose a class from the list on the left \n Select a class to get a description of each class, then select save at the bottom to choose your class.");
             }
             if(select == inGameClassUI.getSelectBard())
             {
-                inGameClassUI.setClassChosen(2);
+                inGameClassUI.setClassChosen(2);            
+                inGameClassUI.getDescriptionLabel().setText(inGameClassUI.inGameClass.getBardText());
             }
             if(select == inGameClassUI.getSelectBarbarian())
             {
                 inGameClassUI.setClassChosen(1);
+                inGameClassUI.getDescriptionLabel().setText(inGameClassUI.inGameClass.getBarbarianText());
             }
             if(select == inGameClassUI.getSelectCleric())
             {
                 inGameClassUI.setClassChosen(3);
+                inGameClassUI.getDescriptionLabel().setText(inGameClassUI.inGameClass.getClericText());
             }
             if(select == inGameClassUI.getSelectDruid())
             {
                 inGameClassUI.setClassChosen(4);
+                inGameClassUI.getDescriptionLabel().setText(inGameClassUI.inGameClass.getDruidText());
             }
             if (select == inGameClassUI.getSelectFighter())
             {
                 inGameClassUI.setClassChosen(5);
+                inGameClassUI.getDescriptionLabel().setText(inGameClassUI.inGameClass.getFighterText());
             }
             if(select ==  inGameClassUI.getSelectMonk())
             {
                 inGameClassUI.setClassChosen(6);
+                inGameClassUI.getDescriptionLabel().setText(inGameClassUI.inGameClass.getMonkText());
             }
             if (select == inGameClassUI.getSelectPaladin())
             {
                 inGameClassUI.setClassChosen(7);
+                inGameClassUI.getDescriptionLabel().setText(inGameClassUI.inGameClass.getPaladinText());
             }
             if (select == inGameClassUI.getSelectRanger())
             {
                 inGameClassUI.setClassChosen(8);
+                inGameClassUI.getDescriptionLabel().setText(inGameClassUI.inGameClass.getRangerText());
             }
             if (select ==  inGameClassUI.getSelectRogue())
             {
                 inGameClassUI.setClassChosen(9);
+                inGameClassUI.getDescriptionLabel().setText(inGameClassUI.inGameClass.getRogueText());
             }
             if( select == inGameClassUI.getSelectSorceror())
             {
                 inGameClassUI.setClassChosen(10);
+                inGameClassUI.getDescriptionLabel().setText(inGameClassUI.inGameClass.getSorcerorText());
             }
             if (select == inGameClassUI.getSelectWizard())
             {
                 inGameClassUI.setClassChosen(11);
+                inGameClassUI.getDescriptionLabel().setText(inGameClassUI.inGameClass.getWizardText());
             }
             if (select == inGameClassUI.getSelectAlchemist())
             {
                 inGameClassUI.setClassChosen(12);
+                inGameClassUI.getDescriptionLabel().setText(inGameClassUI.inGameClass.getAlchemistText());
             }
             if(select == inGameClassUI.getSelectCavalier())
             {
                 inGameClassUI.setClassChosen(13);
+                inGameClassUI.getDescriptionLabel().setText(inGameClassUI.inGameClass.getCavalierText());
             }
-            if(select == inGameClassUI.getSelectInquisitor())
+            if (select == inGameClassUI.getSelectGunslinger())
+            {
+                 inGameClassUI.setClassChosen(15);
+                inGameClassUI.getDescriptionLabel().setText(inGameClassUI.inGameClass.getGunslingerText());
+            }              
+            if(select == inGameClassUI.getSelectInquisitor())                
             {
                 inGameClassUI.setClassChosen(14);
+                inGameClassUI.getDescriptionLabel().setText(inGameClassUI.inGameClass.getInquisitorText());
             }
             if(select == inGameClassUI.getSelectMagus())
             {
-                inGameClassUI.setClassChosen(15);
+                inGameClassUI.setClassChosen(16);
+                inGameClassUI.getDescriptionLabel().setText(inGameClassUI.inGameClass.getMagusText());
             }
             if (select == inGameClassUI.getSelectOracle())
             {
-                inGameClassUI.setClassChosen(16);
+                inGameClassUI.setClassChosen(17);
+                inGameClassUI.getDescriptionLabel().setText(inGameClassUI.inGameClass.getOracleText());
             }
             if (select == inGameClassUI.getSelectSummoner())
             {
-                inGameClassUI.setClassChosen(17);
+                inGameClassUI.setClassChosen(18);
+                inGameClassUI.getDescriptionLabel().setText(inGameClassUI.inGameClass.getSummonerText());
             }
             if (select == inGameClassUI.getSelectWitch())
             {
-                inGameClassUI.setClassChosen(18);
+                inGameClassUI.setClassChosen(19);
+                inGameClassUI.getDescriptionLabel().setText(inGameClassUI.inGameClass.getWitchText());
             }
-
-
         }
     }
 }

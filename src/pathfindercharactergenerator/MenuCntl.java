@@ -22,7 +22,8 @@ public class MenuCntl implements ActionListener
         charCreateCntl.charCreateUI.back.addActionListener(this);
         charCreateCntl.charCreateUI.next.addActionListener(this);
         charCreateCntl.abilityScoreUI.getBack().addActionListener(this);
-
+        charCreateCntl.inGameClassUI.getBack().addActionListener(this);
+        charCreateCntl.inGameClassUI.getNext().addActionListener(this);
     }
     
     public void removePanels()
@@ -47,28 +48,30 @@ public class MenuCntl implements ActionListener
         {
            switchPanel(mainMenu, charCreateCntl.charCreateUI);
         }
-        if
+        if(select == charCreateCntl.charCreateUI.next)
+        {
+            switchPanel(charCreateCntl.charCreateUI, charCreateCntl.inGameClassUI);
+        }
         if(select == charCreateCntl.charCreateUI.back)
         {
             switchPanel(charCreateCntl.charCreateUI, mainMenu);
         }
         if(select == charCreateCntl.abilityScoreUI.getBack())
         {
-            switchPanel(charCreateCntl.abilityScoreUI, charCreateCntl.charCreateUI);
+            switchPanel(charCreateCntl.abilityScoreUI, charCreateCntl.inGameClassUI);
         }
-        if(select == charCreateCntl.charCreateUI.next)
-        {
-            switchPanel(charCreateCntl.charCreateUI, charCreateCntl.inGameClassUI);
-        }
-        if (select == charCreateCntl.abilityScoreUI.chaRoll)
+        if (select == charCreateCntl.abilityScoreUI.getNext())
         {
             switchPanel(charCreateCntl.abilityScoreUI, charCreateCntl.charCreateUI);
         }
-        if (select == charCreateCntl.charCreateUI.next)
+        if (select == charCreateCntl.inGameClassUI.next)
         {
-            switchPanel(charCreateCntl.charCreateUI, charCreateCntl.abilityScoreUI);
+            switchPanel(charCreateCntl.inGameClassUI, charCreateCntl.abilityScoreUI);
         }
-             
+        if (select == charCreateCntl.inGameClassUI.back)
+        {
+            switchPanel(charCreateCntl.inGameClassUI, charCreateCntl.charCreateUI);
+        }   
     }
 
    

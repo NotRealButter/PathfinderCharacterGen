@@ -1,18 +1,15 @@
 package pathfindercharactergenerator;
 
-/**
- *
- * @author Stephen Hite
- */
 public class Skill
 {
     String name;
+    int skillID;
     int value;
+    int abilityModifer;
     Boolean trained;
     
-    Skill()
+    Skill(String name, int skillID)
     {
         
     }
-    
-}
+    }
