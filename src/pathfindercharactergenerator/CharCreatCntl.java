@@ -105,36 +105,37 @@ public class CharCreatCntl
         public void actionPerformed(ActionEvent e)
         {
             Object select = e.getSource();
-            if (select == inGameClassUI.getSave())
-            {
-                
-            }
+
             //AbilityScoreRollers**********************************************
             if (select == abilityScoreUI.chaRoll)
             {
                 abilityScoreUI.chaBox.setText(""+dice.abilityScoreRoll());
             }
-             if (select == abilityScoreUI.dexRoll)
+            if (select == abilityScoreUI.dexRoll)
             {
                 abilityScoreUI.dexBox.setText(""+dice.abilityScoreRoll());
             }
-              if (select == abilityScoreUI.intRoll)
+            if (select == abilityScoreUI.intRoll)
             {
                 abilityScoreUI.intBox.setText(""+dice.abilityScoreRoll());
             }
-               if (select == abilityScoreUI.wisRoll)
+            if (select == abilityScoreUI.wisRoll)
             {
                 abilityScoreUI.wisBox.setText(""+dice.abilityScoreRoll());
             }
-                if (select == abilityScoreUI.strRoll)
+            if (select == abilityScoreUI.strRoll)
             {
                 abilityScoreUI.strBox.setText(""+dice.abilityScoreRoll());
             }
-                 if (select == abilityScoreUI.conRoll)
+            if (select == abilityScoreUI.conRoll)
             {
                 abilityScoreUI.conBox.setText(""+dice.abilityScoreRoll());
             }
         //HandlesTheInGameClassUI*******************************************
+            if (select == inGameClassUI.getSave())
+            {
+                character.setClass1(inGameClassUI.inGameClass.getSelectedClass(inGameClassUI.getClassChosen()));
+            }
             if(select == inGameClassUI.getSelectCustom())
             {
                 inGameClassUI.setClassChosen(0);
@@ -143,6 +144,7 @@ public class CharCreatCntl
             if(select == inGameClassUI.getSelectBard())
             {
                 inGameClassUI.setClassChosen(2);            
+//                inGameClassUI.getDescriptionLabel().setText(inGameClassUI.inGameClass.bard.description);
                 inGameClassUI.getDescriptionLabel().setText(inGameClassUI.inGameClass.getBardText());
             }
             if(select == inGameClassUI.getSelectBarbarian())
@@ -204,17 +206,17 @@ public class CharCreatCntl
             {
                 inGameClassUI.setClassChosen(13);
                 inGameClassUI.getDescriptionLabel().setText(inGameClassUI.inGameClass.getCavalierText());
-            }
-            if (select == inGameClassUI.getSelectGunslinger())
-            {
-                 inGameClassUI.setClassChosen(15);
-                inGameClassUI.getDescriptionLabel().setText(inGameClassUI.inGameClass.getGunslingerText());
-            }              
+            }  
             if(select == inGameClassUI.getSelectInquisitor())                
             {
                 inGameClassUI.setClassChosen(14);
                 inGameClassUI.getDescriptionLabel().setText(inGameClassUI.inGameClass.getInquisitorText());
             }
+            if (select == inGameClassUI.getSelectGunslinger())
+            {
+                inGameClassUI.setClassChosen(15);
+                inGameClassUI.getDescriptionLabel().setText(inGameClassUI.inGameClass.getGunslingerText());
+            }    
             if(select == inGameClassUI.getSelectMagus())
             {
                 inGameClassUI.setClassChosen(16);

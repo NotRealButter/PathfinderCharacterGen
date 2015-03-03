@@ -8,30 +8,31 @@ import java.awt.*;
  */
 public class InGameClass 
 {
-    private Image alchemist = Toolkit.getDefaultToolkit().getImage("images/alchemist.png");
-    private Image bard = Toolkit.getDefaultToolkit().getImage("images/bard.png");
-    private Image barbarian = Toolkit.getDefaultToolkit().getImage("images/barbarian.png");
-    private Image cavalier = Toolkit.getDefaultToolkit().getImage("images/cavalier.png");
-    private Image cleric = Toolkit.getDefaultToolkit().getImage("images/cleric.png");
-    private Image druid = Toolkit.getDefaultToolkit().getImage("images/druid.png");
-    private Image fighter = Toolkit.getDefaultToolkit().getImage("images/fighter.png");
-    private Image gunslinger = Toolkit.getDefaultToolkit().getImage("images/gunslinger.png"); 
-    private Image inquisitor = Toolkit.getDefaultToolkit().getImage("images/inquisitor.png");
-    private Image magus = Toolkit.getDefaultToolkit().getImage("images/magus.png"); 
-    private Image monk = Toolkit.getDefaultToolkit().getImage("images/monk.png");
-    private Image oracle = Toolkit.getDefaultToolkit().getImage("images/oracle.png");
-    private Image paladin = Toolkit.getDefaultToolkit().getImage("images/paladin.png");
-    private Image ranger = Toolkit.getDefaultToolkit().getImage("images/ranger.png");
-    private Image rogue = Toolkit.getDefaultToolkit().getImage("images/rogue.png");
-    private Image sorceror = Toolkit.getDefaultToolkit().getImage("images/sorceror.png");
-    private Image summoner = Toolkit.getDefaultToolkit().getImage("images/summoner.png");
-    private Image witch = Toolkit.getDefaultToolkit().getImage("images/witch.png");
-    private Image wizard = Toolkit.getDefaultToolkit().getImage("images/wizard.png");
+    private Image alchemistImg = Toolkit.getDefaultToolkit().getImage("images/alchemist.png");
+    private Image bardImg = Toolkit.getDefaultToolkit().getImage("images/bard.png");
+    private Image barbarianImg = Toolkit.getDefaultToolkit().getImage("images/barbarian.png");
+    private Image cavalierImg = Toolkit.getDefaultToolkit().getImage("images/cavalier.png");
+    private Image clericImg = Toolkit.getDefaultToolkit().getImage("images/cleric.png");
+    private Image druidImg = Toolkit.getDefaultToolkit().getImage("images/druid.png");
+    private Image fighterImg = Toolkit.getDefaultToolkit().getImage("images/fighter.png");
+    private Image gunslingerImg = Toolkit.getDefaultToolkit().getImage("images/gunslinger.png"); 
+    private Image inquisitorImg = Toolkit.getDefaultToolkit().getImage("images/inquisitor.png");
+    private Image magusImg = Toolkit.getDefaultToolkit().getImage("images/magus.png"); 
+    private Image monkImg = Toolkit.getDefaultToolkit().getImage("images/monk.png");
+    private Image oracleImg = Toolkit.getDefaultToolkit().getImage("images/oracle.png");
+    private Image paladinImg = Toolkit.getDefaultToolkit().getImage("images/paladin.png");
+    private Image rangerImg = Toolkit.getDefaultToolkit().getImage("images/ranger.png");
+    private Image rogueImg = Toolkit.getDefaultToolkit().getImage("images/rogue.png");
+    private Image sorcerorImg = Toolkit.getDefaultToolkit().getImage("images/sorceror.png");
+    private Image summonerImg = Toolkit.getDefaultToolkit().getImage("images/summoner.png");
+    private Image witchImg = Toolkit.getDefaultToolkit().getImage("images/witch.png");
+    private Image wizardImg = Toolkit.getDefaultToolkit().getImage("images/wizard.png");
     
     private String name;
     private int classID;
     private Skill trainedSkills;
     private Dice hitDie;
+    String description;
     
     
     String alchemistText;
@@ -54,9 +55,21 @@ public class InGameClass
     String wizardText;
     String witchText;
     
+    InGameClass alchemist, barbarian,bard,cavalier,cleric,druid,fighter,gunslinger,inquisitor,magus,monk,oracle,paladin,ranger,rogue,sorceror,summoner,wizard,witch;
+    
     InGameClass()
     {
+               initStrings();
+               
+    }
+    InGameClass(String name, int classID, String description)
+    {
+        this.name = name;
+        this.classID = classID;
+        this.description = description;
+        
         initStrings();
+        initClasses();
     }
     
     public void initStrings()
@@ -227,275 +240,322 @@ public class InGameClass
     }
 
     /**
-     * @return the alchemist
+     * @return the alchemistImg
      */
     
     public void initClasses()
     {
-        
+        barbarian = new InGameClass("Barbarian",1,barbarianText);
+        bard = new InGameClass("Bard",2,bardText);
+        cleric = new InGameClass("Cleric", 3,clericText);
+        druid  = new InGameClass("Druid", 4,druidText);
+        fighter = new InGameClass("Fighter",5,fighterText);
+        monk  = new InGameClass("Monk",6,monkText);
+        paladin = new InGameClass("Paladin",7,paladinText);
+        ranger  = new InGameClass("Ranger",8,rangerText);
+        rogue = new InGameClass("Rogue",9,rogueText);
+        sorceror = new InGameClass("Sorceror",10,sorcerorText);
+        wizard = new InGameClass("Wizard",11,wizardText);
+        alchemist = new InGameClass("Alchemist",12,alchemistText);
+        cavalier = new InGameClass("Cavalier",13,cavalierText);
+        inquisitor = new InGameClass("Inquisitor",14,inquisitorText);
+        gunslinger = new InGameClass("Gunslinger",15,gunslingerText);
+        magus = new InGameClass("Magus",16,magusText);
+        oracle = new InGameClass("Oracle",17,oracleText);
+        summoner = new InGameClass("Summoner",18,summonerText);
+        witch = new InGameClass("Witch",19,witchText);        
+    }
+    
+    public InGameClass getSelectedClass(int classChosen)
+    {
+        int selector = classChosen;
+        switch (selector)
+        {
+            case 1: return barbarian;
+            case 2: return bard;
+            case 3: return cleric;
+            case 4: return druid;
+            case 5: return fighter;
+            case 6: return monk;
+            case 7: return paladin;
+            case 8: return ranger;
+            case 9: return rogue;
+            case 10: return sorceror;
+            case 11: return wizard;
+            case 12: return alchemist;
+            case 13: return cavalier;
+            case 14: return inquisitor;
+            case 15: return gunslinger;
+            case 16: return magus;
+            case 17: return oracle;
+            case 18: return summoner;
+            case 19: return witch;  
+            default: return null;
+        }
+            
     }
     
     public Image getAlchemist() {
-        return alchemist;
+        return alchemistImg;
     }
 
     /**
-     * @param alchemist the alchemist to set
+     * @param alchemist the alchemistImg to set
      */
     public void setAlchemist(Image alchemist) {
-        this.alchemist = alchemist;
+        this.alchemistImg = alchemist;
     }
 
     /**
-     * @return the bard
+     * @return the bardImg
      */
     public Image getBard() {
-        return bard;
+        return bardImg;
     }
 
     /**
-     * @param bard the bard to set
+     * @param bard the bardImg to set
      */
     public void setBard(Image bard) {
-        this.bard = bard;
+        this.bardImg = bard;
     }
 
     /**
-     * @return the barbarian
+     * @return the barbarianImg
      */
     public Image getBarbarian() {
-        return barbarian;
+        return barbarianImg;
     }
 
     /**
-     * @param barbarian the barbarian to set
+     * @param barbarian the barbarianImg to set
      */
     public void setBarbarian(Image barbarian) {
-        this.barbarian = barbarian;
+        this.barbarianImg = barbarian;
     }
 
     /**
-     * @return the cavalier
+     * @return the cavalierImg
      */
     public Image getCavalier() {
-        return cavalier;
+        return cavalierImg;
     }
 
     /**
-     * @param cavalier the cavalier to set
+     * @param cavalier the cavalierImg to set
      */
     public void setCavalier(Image cavalier) {
-        this.cavalier = cavalier;
+        this.cavalierImg = cavalier;
     }
 
     /**
-     * @return the cleric
+     * @return the clericImg
      */
     public Image getCleric() {
-        return cleric;
+        return clericImg;
     }
 
     /**
-     * @param cleric the cleric to set
+     * @param cleric the clericImg to set
      */
     public void setCleric(Image cleric) {
-        this.cleric = cleric;
+        this.clericImg = cleric;
     }
 
     /**
-     * @return the druid
+     * @return the druidImg
      */
     public Image getDruid() {
-        return druid;
+        return druidImg;
     }
 
     /**
-     * @param druid the druid to set
+     * @param druid the druidImg to set
      */
     public void setDruid(Image druid) {
-        this.druid = druid;
+        this.druidImg = druid;
     }
 
     /**
-     * @return the fighter
+     * @return the fighterImg
      */
     public Image getFighter() {
-        return fighter;
+        return fighterImg;
     }
 
     /**
-     * @param fighter the fighter to set
+     * @param fighter the fighterImg to set
      */
     public void setFighter(Image fighter) {
-        this.fighter = fighter;
+        this.fighterImg = fighter;
     }
 
     /**
-     * @return the gunslinger
+     * @return the gunslingerImg
      */
     public Image getGunslinger() {
-        return gunslinger;
+        return gunslingerImg;
     }
 
     /**
-     * @param gunslinger the gunslinger to set
+     * @param gunslinger the gunslingerImg to set
      */
     public void setGunslinger(Image gunslinger) {
-        this.gunslinger = gunslinger;
+        this.gunslingerImg = gunslinger;
     }
 
     /**
-     * @return the inquisitor
+     * @return the inquisitorImg
      */
     public Image getInquisitor() {
-        return inquisitor;
+        return inquisitorImg;
     }
 
     /**
-     * @param inquisitor the inquisitor to set
+     * @param inquisitor the inquisitorImg to set
      */
     public void setInquisitor(Image inquisitor) {
-        this.inquisitor = inquisitor;
+        this.inquisitorImg = inquisitor;
     }
 
     /**
-     * @return the magus
+     * @return the magusImg
      */
     public Image getMagus() {
-        return magus;
+        return magusImg;
     }
 
     /**
-     * @param magus the magus to set
+     * @param magus the magusImg to set
      */
     public void setMagus(Image magus) {
-        this.magus = magus;
+        this.magusImg = magus;
     }
 
     /**
-     * @return the monk
+     * @return the monkImg
      */
     public Image getMonk() {
-        return monk;
+        return monkImg;
     }
 
     /**
-     * @param monk the monk to set
+     * @param monk the monkImg to set
      */
     public void setMonk(Image monk) {
-        this.monk = monk;
+        this.monkImg = monk;
     }
 
     /**
-     * @return the oracle
+     * @return the oracleImg
      */
     public Image getOracle() {
-        return oracle;
+        return oracleImg;
     }
 
     /**
-     * @param oracle the oracle to set
+     * @param oracle the oracleImg to set
      */
     public void setOracle(Image oracle) {
-        this.oracle = oracle;
+        this.oracleImg = oracle;
     }
 
     /**
-     * @return the paladin
+     * @return the paladinImg
      */
     public Image getPaladin() {
-        return paladin;
+        return paladinImg;
     }
 
     /**
-     * @param paladin the paladin to set
+     * @param paladin the paladinImg to set
      */
     public void setPaladin(Image paladin) {
-        this.paladin = paladin;
+        this.paladinImg = paladin;
     }
 
     /**
-     * @return the ranger
+     * @return the rangerImg
      */
     public Image getRanger() {
-        return ranger;
+        return rangerImg;
     }
 
     /**
-     * @param ranger the ranger to set
+     * @param ranger the rangerImg to set
      */
     public void setRanger(Image ranger) {
-        this.ranger = ranger;
+        this.rangerImg = ranger;
     }
 
     /**
-     * @return the rogue
+     * @return the rogueImg
      */
     public Image getRogue() {
-        return rogue;
+        return rogueImg;
     }
 
     /**
-     * @param rogue the rogue to set
+     * @param rogue the rogueImg to set
      */
     public void setRogue(Image rogue) {
-        this.rogue = rogue;
+        this.rogueImg = rogue;
     }
 
     /**
-     * @return the sorceror
+     * @return the sorcerorImg
      */
     public Image getSorceror() {
-        return sorceror;
+        return sorcerorImg;
     }
 
     /**
-     * @param sorceror the sorceror to set
+     * @param sorceror the sorcerorImg to set
      */
     public void setSorceror(Image sorceror) {
-        this.sorceror = sorceror;
+        this.sorcerorImg = sorceror;
     }
 
     /**
-     * @return the summoner
+     * @return the summonerImg
      */
     public Image getSummoner() {
-        return summoner;
+        return summonerImg;
     }
 
     /**
-     * @param summoner the summoner to set
+     * @param summoner the summonerImg to set
      */
     public void setSummoner(Image summoner) {
-        this.summoner = summoner;
+        this.summonerImg = summoner;
     }
 
     /**
-     * @return the witch
+     * @return the witchImg
      */
     public Image getWitch() {
-        return witch;
+        return witchImg;
     }
 
     /**
-     * @param witch the witch to set
+     * @param witch the witchImg to set
      */
     public void setWitch(Image witch) {
-        this.witch = witch;
+        this.witchImg = witch;
     }
 
     /**
-     * @return the wizard
+     * @return the wizardImg
      */
     public Image getWizard() {
-        return wizard;
+        return wizardImg;
     }
 
     /**
-     * @param wizard the wizard to set
+     * @param wizard the wizardImg to set
      */
     public void setWizard(Image wizard) {
-        this.wizard = wizard;
+        this.wizardImg = wizard;
     }
 
     /**
