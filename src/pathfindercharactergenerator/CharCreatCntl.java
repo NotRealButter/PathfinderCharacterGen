@@ -59,6 +59,7 @@ public class CharCreatCntl
         inGameClassUI.getSelectSummoner().addActionListener(new ButtonListener());
         inGameClassUI.getSelectWitch().addActionListener(new ButtonListener());
         inGameClassUI.getSelectCustom().addActionListener(new ButtonListener());
+        inGameClassUI.getNext().addActionListener(new ButtonListener());
     }
     
     public void onCreateNextClick()
@@ -104,6 +105,10 @@ public class CharCreatCntl
         public void actionPerformed(ActionEvent e)
         {
             Object select = e.getSource();
+            if (select == inGameClassUI.getSave())
+            {
+                
+            }
             //AbilityScoreRollers**********************************************
             if (select == abilityScoreUI.chaRoll)
             {

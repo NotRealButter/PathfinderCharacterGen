@@ -183,6 +183,7 @@ public class InGameClassUI extends javax.swing.JPanel
         selectGunslinger = new javax.swing.JRadioButton();
         next = new javax.swing.JButton();
         back = new javax.swing.JButton();
+        save = new javax.swing.JButton();
 
         setMaximumSize(new java.awt.Dimension(1280, 720));
         setMinimumSize(new java.awt.Dimension(1280, 720));
@@ -253,6 +254,11 @@ public class InGameClassUI extends javax.swing.JPanel
         back.setMinimumSize(new java.awt.Dimension(100, 100));
         back.setPreferredSize(new java.awt.Dimension(100, 100));
 
+        save.setText("Save");
+        save.setMaximumSize(new java.awt.Dimension(100, 100));
+        save.setMinimumSize(new java.awt.Dimension(100, 100));
+        save.setPreferredSize(new java.awt.Dimension(100, 100));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -285,6 +291,8 @@ public class InGameClassUI extends javax.swing.JPanel
                 .addGap(41, 41, 41))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(save, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(75, 75, 75)
                 .addComponent(next, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(75, 75, 75)
                 .addComponent(back, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -294,10 +302,16 @@ public class InGameClassUI extends javax.swing.JPanel
             .addGroup(layout.createSequentialGroup()
                 .addGap(23, 23, 23)
                 .addComponent(descriptionPane, javax.swing.GroupLayout.PREFERRED_SIZE, 535, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 67, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(next, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(back, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 67, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(next, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(back, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(65, 65, 65)
+                        .addComponent(save, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))))
             .addGroup(layout.createSequentialGroup()
                 .addGap(50, 50, 50)
                 .addComponent(selectBarbarian)
@@ -358,6 +372,7 @@ public class InGameClassUI extends javax.swing.JPanel
     private javax.swing.JTextArea descriptionLabel;
     private javax.swing.JScrollPane descriptionPane;
     public javax.swing.JButton next;
+    private javax.swing.JButton save;
     private javax.swing.JRadioButton selectAlchemist;
     private javax.swing.JRadioButton selectBarbarian;
     private javax.swing.JRadioButton selectBard;
@@ -759,5 +774,19 @@ public class InGameClassUI extends javax.swing.JPanel
      */
     public void setNext(javax.swing.JButton next) {
         this.next = next;
+    }
+
+    /**
+     * @return the save
+     */
+    public javax.swing.JButton getSave() {
+        return save;
+    }
+
+    /**
+     * @param save the save to set
+     */
+    public void setSave(javax.swing.JButton save) {
+        this.save = save;
     }
 }
