@@ -106,10 +106,11 @@ public class CharCreatCntl
         {
             Object select = e.getSource();
 
-            //AbilityScoreRollers**********************************************
+        //AbilityScoreRollers**********************************************
             if (select == abilityScoreUI.chaRoll)
             {
-                abilityScoreUI.chaBox.setText(""+dice.abilityScoreRoll());
+                character.getChaVal().setValue(dice.abilityScoreRoll());
+                abilityScoreUI.chaBox.setText(character.getChaVal().getValue() + "");
             }
             if (select == abilityScoreUI.dexRoll)
             {
