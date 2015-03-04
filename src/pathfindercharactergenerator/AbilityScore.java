@@ -7,7 +7,7 @@ package pathfindercharactergenerator;
 public class AbilityScore 
 {
     private String name;
-    private int value;
+    private int value =0;
     
     AbilityScore()
     {

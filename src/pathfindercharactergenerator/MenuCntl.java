@@ -12,16 +12,19 @@ public class MenuCntl implements ActionListener
     CharCreatCntl charCreateCntl;
     CharViewCntl charViewCntl;
     int panelStatus = 1;
+    Character character;
     
     
     public MenuCntl(MyJFrame frame)
     {
         this.frame = frame;
         this.frame.add(mainMenu);       
-        charCreateCntl = new CharCreatCntl(this);
-        charViewCntl = new CharViewCntl();
+        charCreateCntl = new CharCreatCntl();
+
+        charViewCntl = new CharViewCntl(charCreateCntl.character);
         
         mainMenu.charCreateButton.addActionListener(this);
+        mainMenu.charViewButton.addActionListener(this);
         charCreateCntl.charInfoUI.back.addActionListener(this);
         charCreateCntl.charInfoUI.next.addActionListener(this);
         charCreateCntl.abilityScoreUI.getBack().addActionListener(this);
@@ -55,13 +58,15 @@ public class MenuCntl implements ActionListener
         {
            switchPanel(mainMenu, charCreateCntl.charInfoUI);
         }
-        if (select== mainMenu.viewCharacterButton)
+        if (select== mainMenu.charViewButton)
         {
             switchPanel(mainMenu, charViewCntl.charViewUI);
         }
         if(select == charCreateCntl.charInfoUI.next)
         {
             switchPanel(charCreateCntl.charInfoUI, charCreateCntl.raceUI);
+            charCreateCntl.onCreateNextClick();
+            charViewCntl.updateView();
         }
         if (select == charCreateCntl.raceUI.next)
         {
@@ -74,6 +79,7 @@ public class MenuCntl implements ActionListener
         if(select == charCreateCntl.charInfoUI.back)
         {
             switchPanel(charCreateCntl.charInfoUI, mainMenu);
+            charCreateCntl.onCreateNextClick();
         }
         if(select == charCreateCntl.abilityScoreUI.getBack())
         {

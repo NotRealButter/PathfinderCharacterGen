@@ -34,12 +34,12 @@
                   <Component id="conBox" min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
                       <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                          <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                          <Component id="chaLabel" min="-2" max="-2" attributes="0"/>
+                          <Component id="wisLabel" min="-2" max="-2" attributes="0"/>
+                          <Component id="intLabel" min="-2" max="-2" attributes="0"/>
+                          <Component id="dexLabel" min="-2" max="-2" attributes="0"/>
+                          <Component id="conLabel" min="-2" max="-2" attributes="0"/>
+                          <Component id="strLabel" min="-2" max="-2" attributes="0"/>
                           <Component id="dexBox" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="intBox" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="wisBox" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -85,42 +85,42 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
-              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+              <Component id="strLabel" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="strBox" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="strRoll" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
-              <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+              <Component id="conLabel" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="conBox" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="conRoll" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
-              <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+              <Component id="dexLabel" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="dexBox" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="dexRoll" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
-              <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+              <Component id="intLabel" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
                   <Component id="intBox" min="-2" max="-2" attributes="0"/>
                   <Component id="intRoll" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-              <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+              <Component id="wisLabel" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="wisBox" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="wisRoll" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-              <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+              <Component id="chaLabel" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="chaBox" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -139,32 +139,32 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="jLabel1">
+    <Component class="javax.swing.JLabel" name="strLabel">
       <Properties>
         <Property name="text" type="java.lang.String" value="STRENGTH"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel2">
+    <Component class="javax.swing.JLabel" name="conLabel">
       <Properties>
         <Property name="text" type="java.lang.String" value="CONSTITUTION"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel3">
+    <Component class="javax.swing.JLabel" name="dexLabel">
       <Properties>
         <Property name="text" type="java.lang.String" value="DEXTERITY"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel4">
+    <Component class="javax.swing.JLabel" name="intLabel">
       <Properties>
         <Property name="text" type="java.lang.String" value="INTELLIGENCE"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel5">
+    <Component class="javax.swing.JLabel" name="wisLabel">
       <Properties>
         <Property name="text" type="java.lang.String" value="WISDOM"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel6">
+    <Component class="javax.swing.JLabel" name="chaLabel">
       <Properties>
         <Property name="text" type="java.lang.String" value="CHARISMA"/>
       </Properties>

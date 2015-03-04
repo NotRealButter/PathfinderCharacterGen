@@ -20,9 +20,9 @@ public class Character
     private AbilityScore chaVal;
     private AbilityScore intVal;
     private SkillSet skillSet;
-    private ArmorClass armorClass;
-    private ArmorClass touchArmorClass;
-    private ArmorClass flatArmorClass;
+    private int armorClass;
+    private int touchArmorClass;
+    private int flatArmorClass;
     private int initiative;
     private BaseAttackBonus bab1;
     private BaseAttackBonus bab2;
@@ -65,19 +65,19 @@ public class Character
         defPaladin = new Character("Iacobus Silverheart", 12,class1.paladin,"Male","Lawful Good", race.getHuman(),72,170);
         defRanger = new Character("Eledin Theoren", 12,class1.ranger,"Female","Chaotic Good", race.getElf(),75,140);
     }
-    
-
-    /**
+     /**
      * @return the name
      */
-    public String getName() {
+    public String getName() 
+    {
         return name;
     }
 
     /**
      * @param name the name to set
      */
-    public void setName(String name) {
+    public void setName(String name) 
+    {
         this.name = name;
     }
 
@@ -322,42 +322,42 @@ public class Character
     /**
      * @return the armorClass
      */
-    public ArmorClass getArmorClass() {
+    public int getArmorClass() {
         return armorClass;
     }
 
     /**
      * @param armorClass the armorClass to set
      */
-    public void setArmorClass(ArmorClass armorClass) {
+    public void setArmorClass(int armorClass) {
         this.armorClass = armorClass;
     }
 
     /**
      * @return the touchArmorClass
      */
-    public ArmorClass getTouchArmorClass() {
+    public int getTouchArmorClass() {
         return touchArmorClass;
     }
 
     /**
      * @param touchArmorClass the touchArmorClass to set
      */
-    public void setTouchArmorClass(ArmorClass touchArmorClass) {
+    public void setTouchArmorClass(int touchArmorClass) {
         this.touchArmorClass = touchArmorClass;
     }
 
     /**
      * @return the flatArmorClass
      */
-    public ArmorClass getFlatArmorClass() {
+    public int getFlatArmorClass() {
         return flatArmorClass;
     }
 
     /**
      * @param flatArmorClass the flatArmorClass to set
      */
-    public void setFlatArmorClass(ArmorClass flatArmorClass) {
+    public void setFlatArmorClass(int flatArmorClass) {
         this.flatArmorClass = flatArmorClass;
     }
 

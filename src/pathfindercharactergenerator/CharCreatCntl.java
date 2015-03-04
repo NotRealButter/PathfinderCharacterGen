@@ -7,7 +7,6 @@ import javax.swing.*;
 
 public class CharCreatCntl 
 {
-    MenuCntl menuCntl;
     CharInfoUI charInfoUI;
     AbilityScoreUI abilityScoreUI;
     RaceUI raceUI;
@@ -15,10 +14,9 @@ public class CharCreatCntl
     Character character;
     Dice dice;
     
-    CharCreatCntl(MenuCntl menuCntl)
+    CharCreatCntl()
     {
     //Declaring classes **************************************************
-        this.menuCntl = menuCntl;
         charInfoUI = new CharInfoUI();
         
         abilityScoreUI = new AbilityScoreUI();
@@ -27,7 +25,8 @@ public class CharCreatCntl
         raceUI = new RaceUI();
             raceUI.race.initRaces();
         dice = new Dice();
-        character = new Character("default",0, inGameClassUI.inGameClass.fighter, "Male", "True Neutral", raceUI.race.getHuman(), 0, 0);
+            character = new Character("default",0, inGameClassUI.inGameClass.fighter, "Male", "True Neutral",raceUI.race.getHuman(), 0, 0);
+
         
     //Adding ActionListeners **********************************************
  
