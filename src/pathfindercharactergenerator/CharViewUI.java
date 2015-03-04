@@ -68,6 +68,7 @@ public class CharViewUI extends MyJPanel
         setMaximumSize(new java.awt.Dimension(1280, 720));
         setMinimumSize(new java.awt.Dimension(1280, 720));
         setOpaque(false);
+        setPreferredSize(new java.awt.Dimension(1280, 720));
 
         nameLabel.setText("Name:");
 

@@ -17,31 +17,36 @@ public class CharCreatCntl
     
     CharCreatCntl(MenuCntl menuCntl)
     {
-        
-        //Declaring classes **************************************************
+    //Declaring classes **************************************************
         this.menuCntl = menuCntl;
         charInfoUI = new CharInfoUI();
+        
         abilityScoreUI = new AbilityScoreUI();
         inGameClassUI = new InGameClassUI();
+            inGameClassUI.inGameClass.initClasses();
         raceUI = new RaceUI();
-
-//        character = new Character(null);
+            raceUI.race.initRaces();
         dice = new Dice();
+        character = new Character("default",0, inGameClassUI.inGameClass.fighter, "Male", "True Neutral", raceUI.race.getHuman(), 0, 0);
         
-        //Adding ActionListeners **********************************************
+    //Adding ActionListeners **********************************************
  
-        charInfoUI.getRaceBox().addActionListener(new BoxListener());
         charInfoUI.getGenderBox().addActionListener(new BoxListener());
         charInfoUI.getAlignmentBox().addActionListener(new BoxListener());
-        charInfoUI.getGenderBox().setEnabled(false); 
+        charInfoUI.getGenderBox().setEnabled(true); 
         charInfoUI.getAlignmentBox().setEnabled(false); 
 
+    //Initializing AbScore rollers*****************************************
+        
         abilityScoreUI.chaRoll.addActionListener(new ButtonListener());
         abilityScoreUI.strRoll.addActionListener(new ButtonListener());
         abilityScoreUI.dexRoll.addActionListener(new ButtonListener());
         abilityScoreUI.intRoll.addActionListener(new ButtonListener());
         abilityScoreUI.conRoll.addActionListener(new ButtonListener());
         abilityScoreUI.wisRoll.addActionListener(new ButtonListener());
+        
+    //initializing class items*********************************************
+        
         inGameClassUI.getSelectBard().addActionListener(new ButtonListener());
         inGameClassUI.getSelectBarbarian().addActionListener(new ButtonListener());
         inGameClassUI.getSelectCleric().addActionListener(new ButtonListener());
@@ -63,8 +68,9 @@ public class CharCreatCntl
         inGameClassUI.getSelectWitch().addActionListener(new ButtonListener());
         inGameClassUI.getSelectCustom().addActionListener(new ButtonListener());
         inGameClassUI.getNext().addActionListener(new ButtonListener());
-        raceUI.getBack().addActionListener(new ButtonListener());
-        raceUI.getNext().addActionListener(new ButtonListener());
+        
+    //Initializing race items*************************************************
+        
         raceUI.getSelectHuman().addActionListener(new ButtonListener());
         raceUI.getSelectHalfElf().addActionListener(new ButtonListener());
         raceUI.getSelectHalfOrc().addActionListener(new ButtonListener());
@@ -89,10 +95,6 @@ public class CharCreatCntl
         public void actionPerformed(ActionEvent e) 
         {
            Object select = e.getSource();
-           if (select== charInfoUI.getRaceBox())
-            {
-                charInfoUI.getGenderBox().setEnabled(true);
-            }
             if (select == charInfoUI.getGenderBox())
             {
                 charInfoUI.getAlignmentBox().setEnabled(true);
@@ -247,30 +249,37 @@ public class CharCreatCntl
             if (select==raceUI.getSelectHuman())
             {
                 raceUI.setRaceChosen(1);
+                raceUI.getDescriptionLabel().setText(raceUI.race.getHumanText());
             }
             if(select==raceUI.getSelectElf())
             {
                 raceUI.setRaceChosen(2);
+                raceUI.getDescriptionLabel().setText(raceUI.race.getElfText());
             }
             if (select == raceUI.getSelectDwarf())
             {
                 raceUI.setRaceChosen(3);
+                raceUI.getDescriptionLabel().setText(raceUI.race.getDwarfText());
             }
             if (select == raceUI.getSelectHalfling())
             {
                 raceUI.setRaceChosen(4);
+                raceUI.getDescriptionLabel().setText(raceUI.race.getHalflingText());
             }
             if(select==raceUI.getSelectHalfElf())
             {
                 raceUI.setRaceChosen(5);
+                raceUI.getDescriptionLabel().setText(raceUI.race.getHalfElfText());
             }
             if(select == raceUI.getSelectHalfOrc())
             {
                 raceUI.setRaceChosen(6);
+                raceUI.getDescriptionLabel().setText(raceUI.race.getHalfOrcText());
             }
-            if(select== raceUI.getSelectDwarf())
+            if(select== raceUI.getSelectGnome())
             {
                 raceUI.setRaceChosen(7);
+                raceUI.getDescriptionLabel().setText(raceUI.race.getGnomeText());
             }
         }
     }

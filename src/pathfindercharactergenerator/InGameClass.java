@@ -71,7 +71,6 @@ public class InGameClass
         this.characterIcon = icon;
         
         initStrings();
-        initClasses();
     }
     
     public void initStrings()

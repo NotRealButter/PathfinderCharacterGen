@@ -11,11 +11,9 @@ package pathfindercharactergenerator;
  */
 public class CharInfoUI extends javax.swing.JPanel 
 {
-    String[] race = {"-RACE-","Human" , "Elf" , "Orc", "Halfling"};
     String[] gender = {"-GENDER-","Male", "Female", "Both", "Neither", "Not Applicable"};
     String[] alignment = {"-ALIGNMENT-","Lawful Good","Neutral Good", "Chaotic Good", "Lawful Neutral"," True Neutral", "Chaotic Neutral","Lawful Evil","Neutral Evil","Chaotic Evil"};
-    String[] inGameClass = {"-CLASS-","Barbarian","Bard","Cleric","Druid","Fighter","Monk","Paladin","Ranger","Rogue","Sorceror","Wizard"};
-   
+  
     /**
      * Creates new form CharCreatUI1
      */
@@ -34,14 +32,12 @@ public class CharInfoUI extends javax.swing.JPanel
     private void initComponents() {
 
         genderBox = new javax.swing.JComboBox();
-        raceBox = new javax.swing.JComboBox();
         alignmentBox = new javax.swing.JComboBox();
         back = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         name = new javax.swing.JTextField();
@@ -59,8 +55,6 @@ public class CharInfoUI extends javax.swing.JPanel
                 genderBoxActionPerformed(evt);
             }
         });
-
-        raceBox.setModel(new javax.swing.DefaultComboBoxModel(race));
 
         alignmentBox.setModel(new javax.swing.DefaultComboBoxModel(alignment));
 
@@ -85,9 +79,6 @@ public class CharInfoUI extends javax.swing.JPanel
 
         jLabel4.setFont(new java.awt.Font("Eras Bold ITC", 0, 14)); // NOI18N
         jLabel4.setText("Height:");
-
-        jLabel6.setFont(new java.awt.Font("Eras Bold ITC", 0, 14)); // NOI18N
-        jLabel6.setText("Race:");
 
         jLabel7.setFont(new java.awt.Font("Eras Bold ITC", 0, 14)); // NOI18N
         jLabel7.setText("Gender:");
@@ -145,12 +136,10 @@ public class CharInfoUI extends javax.swing.JPanel
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(alignmentBox, 0, 823, Short.MAX_VALUE)
                                         .addGap(25, 25, 25))
-                                    .addComponent(raceBox, 0, 848, Short.MAX_VALUE)
                                     .addGroup(layout.createSequentialGroup()
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(jLabel8)
-                                            .addComponent(jLabel7)
-                                            .addComponent(jLabel6))
+                                            .addComponent(jLabel7))
                                         .addGap(0, 0, Short.MAX_VALUE)))))
                         .addContainerGap())))
         );
@@ -158,13 +147,9 @@ public class CharInfoUI extends javax.swing.JPanel
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(39, 39, 39)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel6))
+                .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(raceBox, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(name, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(name, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(66, 66, 66)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -224,12 +209,10 @@ public class CharInfoUI extends javax.swing.JPanel
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     public javax.swing.JTextField name;
     public javax.swing.JButton next;
-    public javax.swing.JComboBox raceBox;
     public javax.swing.JSpinner weight;
     // End of variables declaration//GEN-END:variables
 
@@ -263,18 +246,5 @@ public class CharInfoUI extends javax.swing.JPanel
     }
 
  
-    /**
-     * @return the raceBox
-     */
-    public javax.swing.JComboBox getRaceBox() {
-        return raceBox;
-    }
-
-    /**
-     * @param raceBox the raceBox to set
-     */
-    public void setRaceBox(javax.swing.JComboBox raceBox) {
-        this.raceBox = raceBox;
-    }
 
 }

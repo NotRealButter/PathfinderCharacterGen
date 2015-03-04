@@ -43,8 +43,13 @@ public class Character
         this.alignment=alignment;
         this.race=race;
         this.height=height;
-        this.weight=weight;                           
-//                initComponents();
+        this.weight=weight;    
+        strVal = new AbilityScore();
+        dexVal = new AbilityScore();
+        conVal = new AbilityScore();
+        wisVal = new AbilityScore();
+        chaVal = new AbilityScore();
+        intVal = new AbilityScore();
     }
 
     
