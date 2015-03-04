@@ -14,19 +14,23 @@ public class AbilityScore
         
     }
 
-    public String getName() {
+    public String getName()
+    {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(String name)
+    {
         this.name = name;
     }
 
-    public int getValue() {
+    public int getValue() 
+    {
         return value;
     }
 
-    public void setValue(int value) {
+    public void setValue(int value) 
+    {
         this.value = value;
     }
     

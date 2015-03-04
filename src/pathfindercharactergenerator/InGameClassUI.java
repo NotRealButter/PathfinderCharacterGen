@@ -16,7 +16,7 @@ public class InGameClassUI extends javax.swing.JPanel
     private int classChosen = 0;
     public InGameClass inGameClass;
     public Image preparedImage;
-    public Image defaultImage = Toolkit.getDefaultToolkit().getImage("default.png");
+    public Image defaultImage = Toolkit.getDefaultToolkit().getImage("imageas/classes/default.png");
     
     public InGameClassUI()
     {
@@ -56,7 +56,6 @@ public class InGameClassUI extends javax.swing.JPanel
         if(getClassChosen() == 1)
         {
             preparedImage = inGameClass.getBarbarian();
-            descriptionLabel.setText(inGameClass.barbarianText);
             repaint();
         }
         if(getClassChosen() == 2)

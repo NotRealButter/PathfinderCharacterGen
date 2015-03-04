@@ -36,7 +36,8 @@ public class Dice
         thirdDie = rollDice(6);
         fourthDie = rollDice(6);
         
-        total = firstDie + secondDie + thirdDie + secondDie - Math.min(Math.min(firstDie,secondDie), Math.min(thirdDie, fourthDie));
+        total = firstDie + secondDie + thirdDie + secondDie; 
+//                - Math.min(Math.min(firstDie,secondDie), Math.min(thirdDie, fourthDie));
         return total;
     }
 }

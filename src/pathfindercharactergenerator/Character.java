@@ -12,13 +12,13 @@ public class Character
     private Race race;
     private int height;
     private int weight;
-    private Feat feats;
+    private Feat feat;
     private AbilityScore strVal;
     private AbilityScore dexVal;
     private AbilityScore conVal;
     private AbilityScore wisVal;
     private AbilityScore chaVal;
-    private AbilityScore intCal;
+    private AbilityScore intVal;
     private SkillSet skillSet;
     private ArmorClass armorClass;
     private ArmorClass touchArmorClass;
@@ -32,10 +32,35 @@ public class Character
     private SavingThrow fortSave;
     private SavingThrow refSave;
     
-    Character ()
-            {
-                
-            }
+    Character normalDefault,defBard,defBarbarian,defFighter,defRogue,defWizard,defSorceror,defPaladin, defRanger;
+    
+    Character (String name,int health,InGameClass firstClass, String gender, String alignment, Race race, int height, int weight)
+    {
+        this.name = name;
+        this.health=health;
+        this.class1=firstClass;
+        this.gender = gender;
+        this.alignment=alignment;
+        this.race=race;
+        this.height=height;
+        this.weight=weight;                           
+//                initComponents();
+    }
+
+    
+    public void initDefaultChar()
+    {
+        normalDefault = new Character("Bland Blanderson",12,class1.fighter,"Male","Lawful Neutral", race.getHuman(),72,180);
+        defBard = new Character("Elsbeth Tamarie", 9, class1.bard,"Female","True Neutral", race.getHalfElf(),75,100);      
+        defBarbarian = new Character("Tsadok of Grthor", 14, class1.barbarian, "Male","Chaotic Neutral", race.getHalfOrc(),82,220);
+        defFighter = new Character("Lothar Stormfury",14,class1.fighter,"Male","Lawful Neutral", race.getHuman(),72,180);
+        defRogue = new Character("Tristana Yamyrin", 8,class1.rogue,"Female","Chaotic Neutral", race.getHalfling(), 42, 75);
+        defWizard = new Character("Balor the Red", 10, class1.wizard,"Male","Neutral Good", race.getHuman(),65,140);
+        defSorceror = new Character("Kaszagal Whiteclaw",10,class1.sorceror,"Female","Chaotic Evil", race.getDwarf(),45,145);
+        defPaladin = new Character("Iacobus Silverheart", 12,class1.paladin,"Male","Lawful Good", race.getHuman(),72,170);
+        defRanger = new Character("Eledin Theoren", 12,class1.ranger,"Female","Chaotic Good", race.getElf(),75,140);
+    }
+    
 
     /**
      * @return the name
@@ -178,17 +203,17 @@ public class Character
     }
 
     /**
-     * @return the feats
+     * @return the feat
      */
-    public Feat getFeats() {
-        return feats;
+    public Feat getFeat() {
+        return feat;
     }
 
     /**
-     * @param feats the feats to set
+     * @param feat the feat to set
      */
-    public void setFeats(Feat feats) {
-        this.feats = feats;
+    public void setFeat(Feat feat) {
+        this.feat = feat;
     }
 
     /**
@@ -262,17 +287,17 @@ public class Character
     }
 
     /**
-     * @return the intCal
+     * @return the intVal
      */
-    public AbilityScore getIntCal() {
-        return intCal;
+    public AbilityScore getIntVal() {
+        return intVal;
     }
 
     /**
-     * @param intCal the intCal to set
+     * @param intVal the intVal to set
      */
-    public void setIntCal(AbilityScore intCal) {
-        this.intCal = intCal;
+    public void setIntVal(AbilityScore intVal) {
+        this.intVal = intVal;
     }
 
     /**
@@ -442,5 +467,4 @@ public class Character
     public void setRefSave(SavingThrow refSave) {
         this.refSave = refSave;
     }
-    
 }

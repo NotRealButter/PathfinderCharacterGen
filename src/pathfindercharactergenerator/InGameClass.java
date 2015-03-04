@@ -8,25 +8,26 @@ import java.awt.*;
  */
 public class InGameClass 
 {
-    private Image alchemistImg = Toolkit.getDefaultToolkit().getImage("images/alchemist.png");
-    private Image bardImg = Toolkit.getDefaultToolkit().getImage("images/bard.png");
-    private Image barbarianImg = Toolkit.getDefaultToolkit().getImage("images/barbarian.png");
-    private Image cavalierImg = Toolkit.getDefaultToolkit().getImage("images/cavalier.png");
-    private Image clericImg = Toolkit.getDefaultToolkit().getImage("images/cleric.png");
-    private Image druidImg = Toolkit.getDefaultToolkit().getImage("images/druid.png");
-    private Image fighterImg = Toolkit.getDefaultToolkit().getImage("images/fighter.png");
-    private Image gunslingerImg = Toolkit.getDefaultToolkit().getImage("images/gunslinger.png"); 
-    private Image inquisitorImg = Toolkit.getDefaultToolkit().getImage("images/inquisitor.png");
-    private Image magusImg = Toolkit.getDefaultToolkit().getImage("images/magus.png"); 
-    private Image monkImg = Toolkit.getDefaultToolkit().getImage("images/monk.png");
-    private Image oracleImg = Toolkit.getDefaultToolkit().getImage("images/oracle.png");
-    private Image paladinImg = Toolkit.getDefaultToolkit().getImage("images/paladin.png");
-    private Image rangerImg = Toolkit.getDefaultToolkit().getImage("images/ranger.png");
-    private Image rogueImg = Toolkit.getDefaultToolkit().getImage("images/rogue.png");
-    private Image sorcerorImg = Toolkit.getDefaultToolkit().getImage("images/sorceror.png");
-    private Image summonerImg = Toolkit.getDefaultToolkit().getImage("images/summoner.png");
-    private Image witchImg = Toolkit.getDefaultToolkit().getImage("images/witch.png");
-    private Image wizardImg = Toolkit.getDefaultToolkit().getImage("images/wizard.png");
+    private Image alchemistImg = Toolkit.getDefaultToolkit().getImage("images/classes/alchemist.png");
+    private Image bardImg = Toolkit.getDefaultToolkit().getImage("images/classes/bard.png");
+    private Image barbarianImg = Toolkit.getDefaultToolkit().getImage("images/classes/barbarian.png");
+    private Image cavalierImg = Toolkit.getDefaultToolkit().getImage("images/classes/cavalier.png");
+    private Image clericImg = Toolkit.getDefaultToolkit().getImage("images/classes/cleric.png");
+    private Image druidImg = Toolkit.getDefaultToolkit().getImage("images/classes/druid.png");
+    private Image fighterImg = Toolkit.getDefaultToolkit().getImage("images/classes/fighter.png");
+    private Image gunslingerImg = Toolkit.getDefaultToolkit().getImage("images/classes/gunslinger.png"); 
+    private Image inquisitorImg = Toolkit.getDefaultToolkit().getImage("images/classes/inquisitor.png");
+    private Image magusImg = Toolkit.getDefaultToolkit().getImage("images/classes/magus.png"); 
+    private Image monkImg = Toolkit.getDefaultToolkit().getImage("images/classes/monk.png");
+    private Image oracleImg = Toolkit.getDefaultToolkit().getImage("images/classes/oracle.png");
+    private Image paladinImg = Toolkit.getDefaultToolkit().getImage("images/classes/paladin.png");
+    private Image rangerImg = Toolkit.getDefaultToolkit().getImage("images/classes/ranger.png");
+    private Image rogueImg = Toolkit.getDefaultToolkit().getImage("images/classes/rogue.png");
+    private Image sorcerorImg = Toolkit.getDefaultToolkit().getImage("images/classes/sorceror.png");
+    private Image summonerImg = Toolkit.getDefaultToolkit().getImage("images/classes/summoner.png");
+    private Image witchImg = Toolkit.getDefaultToolkit().getImage("images/classes/witch.png");
+    private Image wizardImg = Toolkit.getDefaultToolkit().getImage("images/classes/wizard.png");
+    Image characterIcon;
     
     private String name;
     private int classID;
@@ -62,11 +63,12 @@ public class InGameClass
                initStrings();
                
     }
-    InGameClass(String name, int classID, String description)
+    InGameClass(String name, int classID, String description, Image icon)
     {
         this.name = name;
         this.classID = classID;
         this.description = description;
+        this.characterIcon = icon;
         
         initStrings();
         initClasses();
@@ -245,25 +247,25 @@ public class InGameClass
     
     public void initClasses()
     {
-        barbarian = new InGameClass("Barbarian",1,barbarianText);
-        bard = new InGameClass("Bard",2,bardText);
-        cleric = new InGameClass("Cleric", 3,clericText);
-        druid  = new InGameClass("Druid", 4,druidText);
-        fighter = new InGameClass("Fighter",5,fighterText);
-        monk  = new InGameClass("Monk",6,monkText);
-        paladin = new InGameClass("Paladin",7,paladinText);
-        ranger  = new InGameClass("Ranger",8,rangerText);
-        rogue = new InGameClass("Rogue",9,rogueText);
-        sorceror = new InGameClass("Sorceror",10,sorcerorText);
-        wizard = new InGameClass("Wizard",11,wizardText);
-        alchemist = new InGameClass("Alchemist",12,alchemistText);
-        cavalier = new InGameClass("Cavalier",13,cavalierText);
-        inquisitor = new InGameClass("Inquisitor",14,inquisitorText);
-        gunslinger = new InGameClass("Gunslinger",15,gunslingerText);
-        magus = new InGameClass("Magus",16,magusText);
-        oracle = new InGameClass("Oracle",17,oracleText);
-        summoner = new InGameClass("Summoner",18,summonerText);
-        witch = new InGameClass("Witch",19,witchText);        
+        barbarian = new InGameClass("Barbarian",1,barbarianText,barbarianImg);
+        bard = new InGameClass("Bard",2,bardText,bardImg);
+        cleric = new InGameClass("Cleric", 3,clericText,clericImg);
+        druid  = new InGameClass("Druid", 4,druidText,druidImg);
+        fighter = new InGameClass("Fighter",5,fighterText,fighterImg);
+        monk  = new InGameClass("Monk",6,monkText,monkImg);
+        paladin = new InGameClass("Paladin",7,paladinText,paladinImg);
+        ranger  = new InGameClass("Ranger",8,rangerText,rangerImg);
+        rogue = new InGameClass("Rogue",9,rogueText,rogueImg);
+        sorceror = new InGameClass("Sorceror",10,sorcerorText,sorcerorImg);
+        wizard = new InGameClass("Wizard",11,wizardText,wizardImg);
+        alchemist = new InGameClass("Alchemist",12,alchemistText,alchemistImg);
+        cavalier = new InGameClass("Cavalier",13,cavalierText,cavalierImg);
+        inquisitor = new InGameClass("Inquisitor",14,inquisitorText,inquisitorImg);
+        gunslinger = new InGameClass("Gunslinger",15,gunslingerText,gunslingerImg);
+        magus = new InGameClass("Magus",16,magusText,magusImg);
+        oracle = new InGameClass("Oracle",17,oracleText,oracleImg);
+        summoner = new InGameClass("Summoner",18,summonerText,summonerImg);
+        witch = new InGameClass("Witch",19,witchText,witchImg);        
     }
     
     public InGameClass getSelectedClass(int classChosen)

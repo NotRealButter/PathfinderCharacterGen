@@ -71,7 +71,6 @@ public class SkillSet
         survival= new Skill("survival", 31);
         swim= new Skill("swim", 32);
         useMagicDevice= new Skill("useMagicDevice", 33);
-        
     }
             
             

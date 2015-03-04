@@ -8,8 +8,9 @@ import javax.swing.*;
 public class CharCreatCntl 
 {
     MenuCntl menuCntl;
-    CharCreatUI charCreateUI;
+    CharInfoUI charInfoUI;
     AbilityScoreUI abilityScoreUI;
+    RaceUI raceUI;
     InGameClassUI inGameClassUI;
     Character character;
     Dice dice;
@@ -19,20 +20,22 @@ public class CharCreatCntl
         
         //Declaring classes **************************************************
         this.menuCntl = menuCntl;
-        charCreateUI = new CharCreatUI();
+        charInfoUI = new CharInfoUI();
         abilityScoreUI = new AbilityScoreUI();
         inGameClassUI = new InGameClassUI();
-        character = new Character();
+        raceUI = new RaceUI();
+
+//        character = new Character(null);
         dice = new Dice();
         
         //Adding ActionListeners **********************************************
-        charCreateUI.getInGameClassBox().addActionListener(new BoxListener());    
-        charCreateUI.getRaceBox().addActionListener(new BoxListener());
-        charCreateUI.getGenderBox().addActionListener(new BoxListener());
-        charCreateUI.getAlignmentBox().addActionListener(new BoxListener());
-        charCreateUI.getGenderBox().setEnabled(false); 
-        charCreateUI.getAlignmentBox().setEnabled(false); 
-        charCreateUI.getInGameClassBox().setEnabled(false); 
+ 
+        charInfoUI.getRaceBox().addActionListener(new BoxListener());
+        charInfoUI.getGenderBox().addActionListener(new BoxListener());
+        charInfoUI.getAlignmentBox().addActionListener(new BoxListener());
+        charInfoUI.getGenderBox().setEnabled(false); 
+        charInfoUI.getAlignmentBox().setEnabled(false); 
+
         abilityScoreUI.chaRoll.addActionListener(new ButtonListener());
         abilityScoreUI.strRoll.addActionListener(new ButtonListener());
         abilityScoreUI.dexRoll.addActionListener(new ButtonListener());
@@ -60,21 +63,24 @@ public class CharCreatCntl
         inGameClassUI.getSelectWitch().addActionListener(new ButtonListener());
         inGameClassUI.getSelectCustom().addActionListener(new ButtonListener());
         inGameClassUI.getNext().addActionListener(new ButtonListener());
+        raceUI.getBack().addActionListener(new ButtonListener());
+        raceUI.getNext().addActionListener(new ButtonListener());
+        raceUI.getSelectHuman().addActionListener(new ButtonListener());
+        raceUI.getSelectHalfElf().addActionListener(new ButtonListener());
+        raceUI.getSelectHalfOrc().addActionListener(new ButtonListener());
+        raceUI.getSelectGnome().addActionListener(new ButtonListener());
+        raceUI.getSelectDwarf().addActionListener(new ButtonListener());
+        raceUI.getSelectHalfling().addActionListener(new ButtonListener());
+        raceUI.getSelectElf().addActionListener(new ButtonListener());
     }
     
     public void onCreateNextClick()
     {
-        character.setName(charCreateUI.name.getText());
-        character.setAge((int)charCreateUI.age.getValue());
-        character.setHeight((int)charCreateUI.height.getValue());
-        character.setWeight((int)charCreateUI.weight.getValue());
+        character.setName(charInfoUI.name.getText());
+        character.setAge((int)charInfoUI.age.getValue());
+        character.setHeight((int)charInfoUI.height.getValue());
+        character.setWeight((int)charInfoUI.weight.getValue());
     }
-    
-    public void onClassNextClick()
-    {
-        
-    }
-
     
     class BoxListener implements ActionListener
     {
@@ -83,21 +89,15 @@ public class CharCreatCntl
         public void actionPerformed(ActionEvent e) 
         {
            Object select = e.getSource();
-           if (select== charCreateUI.getRaceBox())
+           if (select== charInfoUI.getRaceBox())
             {
-                charCreateUI.getInGameClassBox().setEnabled(true);
+                charInfoUI.getGenderBox().setEnabled(true);
             }
-            if(select == charCreateUI.getInGameClassBox())
+            if (select == charInfoUI.getGenderBox())
             {
-                charCreateUI.getGenderBox().setEnabled(true);
+                charInfoUI.getAlignmentBox().setEnabled(true);
             }
-            if (select == charCreateUI.getGenderBox())
-            {
-                charCreateUI.getAlignmentBox().setEnabled(true);
-            }
-
         }
-
     }
     class ButtonListener implements ActionListener
     {
@@ -114,23 +114,28 @@ public class CharCreatCntl
             }
             if (select == abilityScoreUI.dexRoll)
             {
-                abilityScoreUI.dexBox.setText(""+dice.abilityScoreRoll());
+                character.getDexVal().setValue(dice.abilityScoreRoll());
+                abilityScoreUI.dexBox.setText(character.getDexVal().getValue() + "");
             }
             if (select == abilityScoreUI.intRoll)
             {
-                abilityScoreUI.intBox.setText(""+dice.abilityScoreRoll());
+                character.getIntVal().setValue(dice.abilityScoreRoll());
+                abilityScoreUI.intBox.setText(character.getIntVal().getValue() + "");
             }
             if (select == abilityScoreUI.wisRoll)
             {
-                abilityScoreUI.wisBox.setText(""+dice.abilityScoreRoll());
+                character.getWisVal().setValue(dice.abilityScoreRoll());
+                abilityScoreUI.wisBox.setText(character.getWisVal().getValue() + "");
             }
             if (select == abilityScoreUI.strRoll)
             {
-                abilityScoreUI.strBox.setText(""+dice.abilityScoreRoll());
+                character.getStrVal().setValue(dice.abilityScoreRoll());
+                abilityScoreUI.strBox.setText(character.getStrVal().getValue() + "");
             }
             if (select == abilityScoreUI.conRoll)
             {
-                abilityScoreUI.conBox.setText(""+dice.abilityScoreRoll());
+                character.getConVal().setValue(dice.abilityScoreRoll());
+                abilityScoreUI.conBox.setText(character.getConVal().getValue() + "");
             }
         //HandlesTheInGameClassUI*******************************************
             if (select == inGameClassUI.getSave())
@@ -237,6 +242,35 @@ public class CharCreatCntl
             {
                 inGameClassUI.setClassChosen(19);
                 inGameClassUI.getDescriptionLabel().setText(inGameClassUI.inGameClass.getWitchText());
+            }
+        //Handles RaceUI controls***********************************************
+            if (select==raceUI.getSelectHuman())
+            {
+                raceUI.setRaceChosen(1);
+            }
+            if(select==raceUI.getSelectElf())
+            {
+                raceUI.setRaceChosen(2);
+            }
+            if (select == raceUI.getSelectDwarf())
+            {
+                raceUI.setRaceChosen(3);
+            }
+            if (select == raceUI.getSelectHalfling())
+            {
+                raceUI.setRaceChosen(4);
+            }
+            if(select==raceUI.getSelectHalfElf())
+            {
+                raceUI.setRaceChosen(5);
+            }
+            if(select == raceUI.getSelectHalfOrc())
+            {
+                raceUI.setRaceChosen(6);
+            }
+            if(select== raceUI.getSelectDwarf())
+            {
+                raceUI.setRaceChosen(7);
             }
         }
     }
