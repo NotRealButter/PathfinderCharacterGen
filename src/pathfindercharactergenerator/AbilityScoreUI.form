@@ -29,11 +29,11 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
-              <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="conBox" min="-2" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="1" attributes="0">
-                      <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="conBox" min="-2" max="-2" attributes="0"/>
                           <Component id="chaLabel" min="-2" max="-2" attributes="0"/>
                           <Component id="wisLabel" min="-2" max="-2" attributes="0"/>
                           <Component id="intLabel" min="-2" max="-2" attributes="0"/>
@@ -45,10 +45,10 @@
                           <Component id="wisBox" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="chaBox" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <Group type="102" alignment="1" attributes="0">
-                          <Component id="strBox" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-                      </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+                      <Component id="strBox" min="-2" pref="102" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace min="-2" pref="108" max="-2" attributes="0"/>
@@ -61,7 +61,7 @@
                           <Component id="intRoll" min="-2" max="-2" attributes="0"/>
                           <Component id="wisRoll" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="987" max="32767" attributes="0"/>
+                      <EmptySpace pref="913" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -70,7 +70,7 @@
                               <EmptySpace max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="730" max="32767" attributes="0"/>
                               <Component id="next" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
                           </Group>
@@ -126,7 +126,7 @@
                   <Component id="chaBox" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="chaRoll" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="0" pref="125" max="32767" attributes="0"/>
+              <EmptySpace min="0" pref="48" max="32767" attributes="0"/>
           </Group>
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace max="32767" attributes="0"/>
@@ -171,7 +171,7 @@
     </Component>
     <Component class="javax.swing.JTextField" name="strBox">
       <Properties>
-        <Property name="text" type="java.lang.String" value="jTextField1"/>
+        <Property name="text" type="java.lang.String" value="Strength Score"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="strBoxActionPerformed"/>
@@ -182,7 +182,7 @@
     </Component>
     <Component class="javax.swing.JTextField" name="conBox">
       <Properties>
-        <Property name="text" type="java.lang.String" value="jTextField2"/>
+        <Property name="text" type="java.lang.String" value="Constitution Score"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="conBoxActionPerformed"/>
@@ -193,7 +193,7 @@
     </Component>
     <Component class="javax.swing.JTextField" name="dexBox">
       <Properties>
-        <Property name="text" type="java.lang.String" value="jTextField3"/>
+        <Property name="text" type="java.lang.String" value="Dexterity Score"/>
       </Properties>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
@@ -201,7 +201,7 @@
     </Component>
     <Component class="javax.swing.JTextField" name="intBox">
       <Properties>
-        <Property name="text" type="java.lang.String" value="jTextField4"/>
+        <Property name="text" type="java.lang.String" value="Intelligence Score"/>
       </Properties>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
@@ -209,7 +209,7 @@
     </Component>
     <Component class="javax.swing.JTextField" name="wisBox">
       <Properties>
-        <Property name="text" type="java.lang.String" value="jTextField5"/>
+        <Property name="text" type="java.lang.String" value="Wisdom Score"/>
       </Properties>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
@@ -217,7 +217,7 @@
     </Component>
     <Component class="javax.swing.JTextField" name="chaBox">
       <Properties>
-        <Property name="text" type="java.lang.String" value="jTextField6"/>
+        <Property name="text" type="java.lang.String" value="Charisma Score"/>
       </Properties>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
