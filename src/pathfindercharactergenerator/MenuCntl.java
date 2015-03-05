@@ -25,14 +25,19 @@ public class MenuCntl implements ActionListener
         
         mainMenu.charCreateButton.addActionListener(this);
         mainMenu.charViewButton.addActionListener(this);
+        
         charCreateCntl.charInfoUI.back.addActionListener(this);
         charCreateCntl.charInfoUI.next.addActionListener(this);
-        charCreateCntl.abilityScoreUI.getBack().addActionListener(this);
+        
+        charCreateCntl.abilityScoreUI.getBack().addActionListener(this); 
+        charCreateCntl.abilityScoreUI.getNext().addActionListener(this);
+        
         charCreateCntl.inGameClassUI.getBack().addActionListener(this);
         charCreateCntl.inGameClassUI.getNext().addActionListener(this);
+        
         charCreateCntl.raceUI.getNext().addActionListener(this);
         charCreateCntl.raceUI.getBack().addActionListener(this);
-        charCreateCntl.abilityScoreUI.getNext().addActionListener(this);
+       
         charViewCntl.charViewUI.getNext().addActionListener(this);
         charViewCntl.charViewUI.getBack().addActionListener(this);
 

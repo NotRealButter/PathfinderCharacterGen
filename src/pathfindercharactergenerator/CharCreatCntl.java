@@ -166,138 +166,190 @@ public class CharCreatCntl
             if(select == inGameClassUI.getSelectCustom())
             {
                 inGameClassUI.setClassChosen(0);
+                inGameClassUI.next.setEnabled(true);
+                inGameClassUI.back.setEnabled(true);
                 inGameClassUI.getDescriptionLabel().setText("Choose a class from the list on the left \n Select a class to get a description of each class, then select save at the bottom to choose your class.");
             }
             if(select == inGameClassUI.getSelectBard())
             {
                 inGameClassUI.setClassChosen(2);            
-//                inGameClassUI.getDescriptionLabel().setText(inGameClassUI.inGameClass.bard.description);
+                inGameClassUI.next.setEnabled(true);
+                inGameClassUI.back.setEnabled(true);
                 inGameClassUI.getDescriptionLabel().setText(inGameClassUI.inGameClass.getBardText());
             }
             if(select == inGameClassUI.getSelectBarbarian())
             {
                 inGameClassUI.setClassChosen(1);
+                inGameClassUI.next.setEnabled(true);
+                inGameClassUI.back.setEnabled(true);
                 inGameClassUI.getDescriptionLabel().setText(inGameClassUI.inGameClass.getBarbarianText());
             }
             if(select == inGameClassUI.getSelectCleric())
             {
-                inGameClassUI.setClassChosen(3);
+                inGameClassUI.setClassChosen(3);    
+                inGameClassUI.back.setEnabled(true);
+                inGameClassUI.next.setEnabled(true);
                 inGameClassUI.getDescriptionLabel().setText(inGameClassUI.inGameClass.getClericText());
             }
             if(select == inGameClassUI.getSelectDruid())
             {
                 inGameClassUI.setClassChosen(4);
+                inGameClassUI.next.setEnabled(true);
+                inGameClassUI.back.setEnabled(true);
                 inGameClassUI.getDescriptionLabel().setText(inGameClassUI.inGameClass.getDruidText());
             }
             if (select == inGameClassUI.getSelectFighter())
             {
                 inGameClassUI.setClassChosen(5);
+                inGameClassUI.next.setEnabled(true);
+                inGameClassUI.back.setEnabled(true);
                 inGameClassUI.getDescriptionLabel().setText(inGameClassUI.inGameClass.getFighterText());
             }
             if(select ==  inGameClassUI.getSelectMonk())
             {
                 inGameClassUI.setClassChosen(6);
+                inGameClassUI.next.setEnabled(true);
+                inGameClassUI.back.setEnabled(true);
                 inGameClassUI.getDescriptionLabel().setText(inGameClassUI.inGameClass.getMonkText());
             }
             if (select == inGameClassUI.getSelectPaladin())
             {
                 inGameClassUI.setClassChosen(7);
+                inGameClassUI.next.setEnabled(true);
+                inGameClassUI.back.setEnabled(true);
                 inGameClassUI.getDescriptionLabel().setText(inGameClassUI.inGameClass.getPaladinText());
             }
             if (select == inGameClassUI.getSelectRanger())
             {
                 inGameClassUI.setClassChosen(8);
+                inGameClassUI.next.setEnabled(true);
+                inGameClassUI.back.setEnabled(true);
                 inGameClassUI.getDescriptionLabel().setText(inGameClassUI.inGameClass.getRangerText());
             }
             if (select ==  inGameClassUI.getSelectRogue())
             {
                 inGameClassUI.setClassChosen(9);
+                inGameClassUI.next.setEnabled(true);
+                inGameClassUI.back.setEnabled(true);
                 inGameClassUI.getDescriptionLabel().setText(inGameClassUI.inGameClass.getRogueText());
             }
             if( select == inGameClassUI.getSelectSorceror())
             {
                 inGameClassUI.setClassChosen(10);
+                inGameClassUI.next.setEnabled(true);
+                inGameClassUI.back.setEnabled(true);
                 inGameClassUI.getDescriptionLabel().setText(inGameClassUI.inGameClass.getSorcerorText());
             }
             if (select == inGameClassUI.getSelectWizard())
             {
                 inGameClassUI.setClassChosen(11);
+                inGameClassUI.next.setEnabled(true);
+                inGameClassUI.back.setEnabled(true);
                 inGameClassUI.getDescriptionLabel().setText(inGameClassUI.inGameClass.getWizardText());
             }
             if (select == inGameClassUI.getSelectAlchemist())
             {
                 inGameClassUI.setClassChosen(12);
+                inGameClassUI.next.setEnabled(true);
+                inGameClassUI.back.setEnabled(true);
                 inGameClassUI.getDescriptionLabel().setText(inGameClassUI.inGameClass.getAlchemistText());
             }
             if(select == inGameClassUI.getSelectCavalier())
             {
                 inGameClassUI.setClassChosen(13);
+                inGameClassUI.next.setEnabled(true);
+                inGameClassUI.back.setEnabled(true);
                 inGameClassUI.getDescriptionLabel().setText(inGameClassUI.inGameClass.getCavalierText());
             }  
             if(select == inGameClassUI.getSelectInquisitor())                
             {
                 inGameClassUI.setClassChosen(14);
+                inGameClassUI.next.setEnabled(true);
+                inGameClassUI.back.setEnabled(true);
                 inGameClassUI.getDescriptionLabel().setText(inGameClassUI.inGameClass.getInquisitorText());
             }
             if (select == inGameClassUI.getSelectGunslinger())
             {
                 inGameClassUI.setClassChosen(15);
+                inGameClassUI.next.setEnabled(true);
+                inGameClassUI.back.setEnabled(true);
                 inGameClassUI.getDescriptionLabel().setText(inGameClassUI.inGameClass.getGunslingerText());
             }    
             if(select == inGameClassUI.getSelectMagus())
             {
                 inGameClassUI.setClassChosen(16);
+                inGameClassUI.next.setEnabled(true);
+                inGameClassUI.back.setEnabled(true);
                 inGameClassUI.getDescriptionLabel().setText(inGameClassUI.inGameClass.getMagusText());
             }
             if (select == inGameClassUI.getSelectOracle())
             {
                 inGameClassUI.setClassChosen(17);
+                inGameClassUI.next.setEnabled(true);
+                inGameClassUI.back.setEnabled(true);
                 inGameClassUI.getDescriptionLabel().setText(inGameClassUI.inGameClass.getOracleText());
             }
             if (select == inGameClassUI.getSelectSummoner())
             {
                 inGameClassUI.setClassChosen(18);
+                inGameClassUI.next.setEnabled(true);
+                inGameClassUI.back.setEnabled(true);
                 inGameClassUI.getDescriptionLabel().setText(inGameClassUI.inGameClass.getSummonerText());
             }
             if (select == inGameClassUI.getSelectWitch())
             {
                 inGameClassUI.setClassChosen(19);
+                inGameClassUI.next.setEnabled(true);
+                inGameClassUI.back.setEnabled(true);
                 inGameClassUI.getDescriptionLabel().setText(inGameClassUI.inGameClass.getWitchText());
             }
         //Handles RaceUI controls***********************************************
             if (select==raceUI.getSelectHuman())
             {
                 raceUI.setRaceChosen(1);
+                raceUI.next.setEnabled(true);
                 raceUI.getDescriptionLabel().setText(raceUI.race.getHumanText());
             }
             if(select==raceUI.getSelectElf())
             {
                 raceUI.setRaceChosen(2);
+                raceUI.next.setEnabled(true);
+                raceUI.back.setEnabled(true);
                 raceUI.getDescriptionLabel().setText(raceUI.race.getElfText());
             }
             if (select == raceUI.getSelectDwarf())
             {
                 raceUI.setRaceChosen(3);
+                raceUI.next.setEnabled(true);
+                raceUI.back.setEnabled(true);
                 raceUI.getDescriptionLabel().setText(raceUI.race.getDwarfText());
             }
             if (select == raceUI.getSelectHalfling())
             {
                 raceUI.setRaceChosen(4);
+                raceUI.next.setEnabled(true);
+                raceUI.back.setEnabled(true);
                 raceUI.getDescriptionLabel().setText(raceUI.race.getHalflingText());
             }
             if(select==raceUI.getSelectHalfElf())
             {
                 raceUI.setRaceChosen(5);
+                raceUI.next.setEnabled(true);
+                raceUI.back.setEnabled(true);
                 raceUI.getDescriptionLabel().setText(raceUI.race.getHalfElfText());
             }
             if(select == raceUI.getSelectHalfOrc())
             {
                 raceUI.setRaceChosen(6);
+                raceUI.next.setEnabled(true);
+                raceUI.back.setEnabled(true);
                 raceUI.getDescriptionLabel().setText(raceUI.race.getHalfOrcText());
             }
             if(select== raceUI.getSelectGnome())
             {
                 raceUI.setRaceChosen(7);
+                raceUI.next.setEnabled(true);
+                raceUI.back.setEnabled(true);
                 raceUI.getDescriptionLabel().setText(raceUI.race.getGnomeText());
             }
         }
