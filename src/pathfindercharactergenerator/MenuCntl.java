@@ -114,11 +114,7 @@ public class MenuCntl implements ActionListener
         {
             switchPanel(charViewCntl.charViewUI, mainMenu);
         }
-
     }
-
-   
-
 }
 
 
