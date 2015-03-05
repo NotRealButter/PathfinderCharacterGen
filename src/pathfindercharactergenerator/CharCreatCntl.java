@@ -85,6 +85,16 @@ public class CharCreatCntl
         character.setAge((int)charInfoUI.age.getValue());
         character.setHeight((int)charInfoUI.height.getValue());
         character.setWeight((int)charInfoUI.weight.getValue());
+        character.setAlignment(""+charInfoUI.getAlignmentBox().getSelectedItem());
+    }
+    public void onRaceSaveClick()
+    {
+        character.setRace(raceUI.race.getSelectedClass(raceUI.getRaceChosen()));
+    }
+    
+    public void onClassSaveClick()
+    {
+        character.setClass1(inGameClassUI.inGameClass.getSelectedClass(inGameClassUI.getClassChosen()));
     }
     
     class BoxListener implements ActionListener
@@ -111,37 +121,47 @@ public class CharCreatCntl
             if (select == abilityScoreUI.chaRoll)
             {
                 character.getChaVal().setValue(dice.abilityScoreRoll());
+                character.getChaVal().setModifier(character.getChaVal().calcMod());
                 abilityScoreUI.chaBox.setText(character.getChaVal().getValue() + "");
             }
             if (select == abilityScoreUI.dexRoll)
             {
                 character.getDexVal().setValue(dice.abilityScoreRoll());
+                character.getDexVal().setModifier(character.getDexVal().calcMod());
                 abilityScoreUI.dexBox.setText(character.getDexVal().getValue() + "");
             }
             if (select == abilityScoreUI.intRoll)
             {
                 character.getIntVal().setValue(dice.abilityScoreRoll());
+                character.getIntVal().setModifier(character.getIntVal().calcMod());
                 abilityScoreUI.intBox.setText(character.getIntVal().getValue() + "");
             }
             if (select == abilityScoreUI.wisRoll)
             {
                 character.getWisVal().setValue(dice.abilityScoreRoll());
+                character.getWisVal().setModifier(character.getWisVal().calcMod());
                 abilityScoreUI.wisBox.setText(character.getWisVal().getValue() + "");
             }
             if (select == abilityScoreUI.strRoll)
             {
                 character.getStrVal().setValue(dice.abilityScoreRoll());
+                character.getStrVal().setModifier(character.getStrVal().calcMod());
                 abilityScoreUI.strBox.setText(character.getStrVal().getValue() + "");
             }
             if (select == abilityScoreUI.conRoll)
             {
                 character.getConVal().setValue(dice.abilityScoreRoll());
+                character.getConVal().setModifier(character.getConVal().calcMod());
                 abilityScoreUI.conBox.setText(character.getConVal().getValue() + "");
             }
         //HandlesTheInGameClassUI*******************************************
             if (select == inGameClassUI.getSave())
             {
-                character.setClass1(inGameClassUI.inGameClass.getSelectedClass(inGameClassUI.getClassChosen()));
+                    onClassSaveClick();
+            }
+            if (select == raceUI.getSave())
+            {
+                onRaceSaveClick();
             }
             if(select == inGameClassUI.getSelectCustom())
             {

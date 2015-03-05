@@ -55,13 +55,13 @@ public class Race
     }
     public void initRaces()
     {
-        setDwarf(new Race("dwarf", 1, 0,0,2,2,-2,0));
-        setElf(new Race("elf",2,0,2,-2,0,0,2));
-        setGnome(new Race ("gnome",3,-2,0,2,0,2,0));
-        setHalfElf(new Race ("half-elf",4,0,0,0,0,0,0));
-        setHalfOrc(new Race ("half-Orc",5,0,0,0,0,0,0));
-        setHalfling(new Race ("half-Orc", 6, -2,2,0,0,2,0));
-        setHuman(new Race("human", 7,0,0,0,0,0,0));
+        setDwarf(new Race("Dwarf", 1, 0,0,2,2,-2,0));
+        setElf(new Race("Elf",2,0,2,-2,0,0,2));
+        setGnome(new Race ("Gnome",3,-2,0,2,0,2,0));
+        setHalfElf(new Race ("Half-Elf",4,0,0,0,0,0,0));
+        setHalfOrc(new Race ("Half-Orc",5,0,0,0,0,0,0));
+        setHalfling(new Race ("Halfling", 6,-2,2,0,0,2,0));
+        setHuman(new Race("Human", 7,0,0,0,0,0,0));
     }
     public void initRaceStrings()
     {

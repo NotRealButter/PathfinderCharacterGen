@@ -30,16 +30,16 @@ public class CharViewUI extends MyJPanel
 
         nameLabel = new javax.swing.JLabel();
         raceLabel = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
+        classLabel = new javax.swing.JLabel();
+        alignmentLabel = new javax.swing.JLabel();
+        heightLabel = new javax.swing.JLabel();
+        weightLabel = new javax.swing.JLabel();
+        strLabel = new javax.swing.JLabel();
+        dexLabel = new javax.swing.JLabel();
+        conLabel = new javax.swing.JLabel();
+        intLabel = new javax.swing.JLabel();
+        wisLabel = new javax.swing.JLabel();
+        chaLabel = new javax.swing.JLabel();
         nameBox = new javax.swing.JTextField();
         raceBox = new javax.swing.JTextField();
         classBox = new javax.swing.JTextField();
@@ -52,18 +52,20 @@ public class CharViewUI extends MyJPanel
         intValBox = new javax.swing.JTextField();
         wisValBox = new javax.swing.JTextField();
         chaValBox = new javax.swing.JTextField();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
-        jTextField14 = new javax.swing.JTextField();
-        jTextField15 = new javax.swing.JTextField();
-        jTextField16 = new javax.swing.JTextField();
-        jTextField17 = new javax.swing.JTextField();
-        jTextField18 = new javax.swing.JTextField();
-        jTextField19 = new javax.swing.JTextField();
+        strScoreLabel = new javax.swing.JLabel();
+        dexScoreLabel = new javax.swing.JLabel();
+        conScoreLabel = new javax.swing.JLabel();
+        intScoreLabel = new javax.swing.JLabel();
+        wisScoreLabel = new javax.swing.JLabel();
+        chaScoreLabel = new javax.swing.JLabel();
+        strModBox = new javax.swing.JTextField();
+        dexModBox = new javax.swing.JTextField();
+        conModBox = new javax.swing.JTextField();
+        intModBox = new javax.swing.JTextField();
+        wisModBox = new javax.swing.JTextField();
+        chaModBox = new javax.swing.JTextField();
+        next = new javax.swing.JButton();
+        back = new javax.swing.JButton();
 
         setMaximumSize(new java.awt.Dimension(1280, 720));
         setMinimumSize(new java.awt.Dimension(1280, 720));
@@ -74,25 +76,25 @@ public class CharViewUI extends MyJPanel
 
         raceLabel.setText("Race:");
 
-        jLabel1.setText("Class:");
+        classLabel.setText("Class:");
 
-        jLabel2.setText("Alignment:");
+        alignmentLabel.setText("Alignment:");
 
-        jLabel3.setText("Height:");
+        heightLabel.setText("Height:");
 
-        jLabel4.setText("Weight:");
+        weightLabel.setText("Weight:");
 
-        jLabel5.setText("Strength:");
+        strLabel.setText("Strength:");
 
-        jLabel6.setText("Dexterity:");
+        dexLabel.setText("Dexterity:");
 
-        jLabel7.setText("Constitution:");
+        conLabel.setText("Constitution:");
 
-        jLabel8.setText("Intelligence");
+        intLabel.setText("Intelligence");
 
-        jLabel9.setText("Wisdom:");
+        wisLabel.setText("Wisdom:");
 
-        jLabel10.setText("Charisma:");
+        chaLabel.setText("Charisma:");
 
         nameBox.setText("jTextField1");
 
@@ -118,29 +120,39 @@ public class CharViewUI extends MyJPanel
 
         chaValBox.setText("jTextField12");
 
-        jLabel11.setText("Str Score:");
+        strScoreLabel.setText("Str Mod:");
 
-        jLabel12.setText("Dex Score:");
+        dexScoreLabel.setText("Dex Mod:");
 
-        jLabel13.setText("Con Score:");
+        conScoreLabel.setText("Con Mod:");
 
-        jLabel14.setText("Int Score:");
+        intScoreLabel.setText("Int Mod:");
 
-        jLabel15.setText("Wis Score:");
+        wisScoreLabel.setText("Wis Mod:");
 
-        jLabel16.setText("Cha Score:");
+        chaScoreLabel.setText("Cha Mod:");
 
-        jTextField14.setText("jTextField14");
+        strModBox.setText("jTextField14");
 
-        jTextField15.setText("jTextField15");
+        dexModBox.setText("jTextField15");
 
-        jTextField16.setText("jTextField16");
+        conModBox.setText("jTextField16");
 
-        jTextField17.setText("jTextField17");
+        intModBox.setText("jTextField17");
 
-        jTextField18.setText("jTextField18");
+        wisModBox.setText("jTextField18");
 
-        jTextField19.setText("jTextField19");
+        chaModBox.setText("jTextField19");
+
+        next.setText("Next");
+        next.setMaximumSize(new java.awt.Dimension(100, 100));
+        next.setMinimumSize(new java.awt.Dimension(100, 100));
+        next.setPreferredSize(new java.awt.Dimension(100, 100));
+
+        back.setText("Back");
+        back.setMaximumSize(new java.awt.Dimension(100, 100));
+        back.setMinimumSize(new java.awt.Dimension(100, 100));
+        back.setPreferredSize(new java.awt.Dimension(100, 100));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -149,18 +161,18 @@ public class CharViewUI extends MyJPanel
             .addGroup(layout.createSequentialGroup()
                 .addGap(74, 74, 74)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel8)
-                    .addComponent(jLabel7)
-                    .addComponent(jLabel6)
-                    .addComponent(jLabel5)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel1)
+                    .addComponent(intLabel)
+                    .addComponent(conLabel)
+                    .addComponent(dexLabel)
+                    .addComponent(strLabel)
+                    .addComponent(weightLabel)
+                    .addComponent(heightLabel)
+                    .addComponent(alignmentLabel)
+                    .addComponent(classLabel)
                     .addComponent(nameLabel)
                     .addComponent(raceLabel)
-                    .addComponent(jLabel10)
-                    .addComponent(jLabel9))
+                    .addComponent(chaLabel)
+                    .addComponent(wisLabel))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(nameBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -174,36 +186,41 @@ public class CharViewUI extends MyJPanel
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(chaValBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel16))
+                                .addComponent(chaScoreLabel))
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                 .addComponent(wisValBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel15))
+                                .addComponent(wisScoreLabel))
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                 .addComponent(intValBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel14))
+                                .addComponent(intScoreLabel))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(conValBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel13))
+                                .addComponent(conScoreLabel))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(dexValBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel12))
+                                .addComponent(dexScoreLabel))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(strValBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(68, 68, 68)
-                                .addComponent(jLabel11)))
+                                .addComponent(strScoreLabel)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(896, Short.MAX_VALUE))
+                            .addComponent(strModBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(dexModBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(conModBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(intModBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(wisModBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(chaModBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(903, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(next, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(75, 75, 75)
+                .addComponent(back, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -218,97 +235,102 @@ public class CharViewUI extends MyJPanel
                     .addComponent(raceBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
+                    .addComponent(classLabel)
                     .addComponent(classBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
+                    .addComponent(alignmentLabel)
                     .addComponent(alignmentBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
+                    .addComponent(heightLabel)
                     .addComponent(heightBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
+                    .addComponent(weightLabel)
                     .addComponent(weightBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
+                    .addComponent(strLabel)
                     .addComponent(strValBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel11)
-                    .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(strScoreLabel)
+                    .addComponent(strModBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
+                    .addComponent(dexLabel)
                     .addComponent(dexValBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel12)
-                    .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(dexScoreLabel)
+                    .addComponent(dexModBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
+                    .addComponent(conLabel)
                     .addComponent(conValBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel13)
-                    .addComponent(jTextField16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(conScoreLabel)
+                    .addComponent(conModBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel8)
+                    .addComponent(intLabel)
                     .addComponent(intValBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel14)
-                    .addComponent(jTextField17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(intScoreLabel)
+                    .addComponent(intModBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel9)
+                    .addComponent(wisLabel)
                     .addComponent(wisValBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel15)
-                    .addComponent(jTextField18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(wisScoreLabel)
+                    .addComponent(wisModBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel10)
+                    .addComponent(chaLabel)
                     .addComponent(chaValBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel16)
-                    .addComponent(jTextField19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(356, Short.MAX_VALUE))
+                    .addComponent(chaScoreLabel)
+                    .addComponent(chaModBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 256, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(back, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(next, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField alignmentBox;
+    private javax.swing.JLabel alignmentLabel;
+    private javax.swing.JButton back;
+    private javax.swing.JLabel chaLabel;
+    private javax.swing.JTextField chaModBox;
+    private javax.swing.JLabel chaScoreLabel;
     private javax.swing.JTextField chaValBox;
     private javax.swing.JTextField classBox;
+    private javax.swing.JLabel classLabel;
+    private javax.swing.JLabel conLabel;
+    private javax.swing.JTextField conModBox;
+    private javax.swing.JLabel conScoreLabel;
     private javax.swing.JTextField conValBox;
+    private javax.swing.JLabel dexLabel;
+    private javax.swing.JTextField dexModBox;
+    private javax.swing.JLabel dexScoreLabel;
     private javax.swing.JTextField dexValBox;
     private javax.swing.JTextField heightBox;
+    private javax.swing.JLabel heightLabel;
+    private javax.swing.JLabel intLabel;
+    private javax.swing.JTextField intModBox;
+    private javax.swing.JLabel intScoreLabel;
     private javax.swing.JTextField intValBox;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
-    private javax.swing.JTextField jTextField14;
-    private javax.swing.JTextField jTextField15;
-    private javax.swing.JTextField jTextField16;
-    private javax.swing.JTextField jTextField17;
-    private javax.swing.JTextField jTextField18;
-    private javax.swing.JTextField jTextField19;
     private javax.swing.JTextField nameBox;
     private javax.swing.JLabel nameLabel;
+    private javax.swing.JButton next;
     private javax.swing.JTextField raceBox;
     private javax.swing.JLabel raceLabel;
+    private javax.swing.JLabel strLabel;
+    private javax.swing.JTextField strModBox;
+    private javax.swing.JLabel strScoreLabel;
     private javax.swing.JTextField strValBox;
     private javax.swing.JTextField weightBox;
+    private javax.swing.JLabel weightLabel;
+    private javax.swing.JLabel wisLabel;
+    private javax.swing.JTextField wisModBox;
+    private javax.swing.JLabel wisScoreLabel;
     private javax.swing.JTextField wisValBox;
     // End of variables declaration//GEN-END:variables
 
@@ -324,5 +346,523 @@ public class CharViewUI extends MyJPanel
      */
     public void setNameBox(javax.swing.JTextField nameBox) {
         this.nameBox = nameBox;
+    }
+
+    /**
+     * @return the alignmentBox
+     */
+    public javax.swing.JTextField getAlignmentBox() {
+        return alignmentBox;
+    }
+
+    /**
+     * @param alignmentBox the alignmentBox to set
+     */
+    public void setAlignmentBox(javax.swing.JTextField alignmentBox) {
+        this.alignmentBox = alignmentBox;
+    }
+
+    /**
+     * @return the alignmentLabel
+     */
+    public javax.swing.JLabel getAlignmentLabel() {
+        return alignmentLabel;
+    }
+
+    /**
+     * @param alignmentLabel the alignmentLabel to set
+     */
+    public void setAlignmentLabel(javax.swing.JLabel alignmentLabel) {
+        this.alignmentLabel = alignmentLabel;
+    }
+
+    /**
+     * @return the chaLabel
+     */
+    public javax.swing.JLabel getChaLabel() {
+        return chaLabel;
+    }
+
+    /**
+     * @param chaLabel the chaLabel to set
+     */
+    public void setChaLabel(javax.swing.JLabel chaLabel) {
+        this.chaLabel = chaLabel;
+    }
+
+    /**
+     * @return the chaModBox
+     */
+    public javax.swing.JTextField getChaModBox() {
+        return chaModBox;
+    }
+
+    /**
+     * @param chaModBox the chaModBox to set
+     */
+    public void setChaModBox(javax.swing.JTextField chaModBox) {
+        this.chaModBox = chaModBox;
+    }
+
+    /**
+     * @return the chaScoreLabel
+     */
+    public javax.swing.JLabel getChaScoreLabel() {
+        return chaScoreLabel;
+    }
+
+    /**
+     * @param chaScoreLabel the chaScoreLabel to set
+     */
+    public void setChaScoreLabel(javax.swing.JLabel chaScoreLabel) {
+        this.chaScoreLabel = chaScoreLabel;
+    }
+
+    /**
+     * @return the chaValBox
+     */
+    public javax.swing.JTextField getChaValBox() {
+        return chaValBox;
+    }
+
+    /**
+     * @param chaValBox the chaValBox to set
+     */
+    public void setChaValBox(javax.swing.JTextField chaValBox) {
+        this.chaValBox = chaValBox;
+    }
+
+    /**
+     * @return the classBox
+     */
+    public javax.swing.JTextField getClassBox() {
+        return classBox;
+    }
+
+    /**
+     * @param classBox the classBox to set
+     */
+    public void setClassBox(javax.swing.JTextField classBox) {
+        this.classBox = classBox;
+    }
+
+    /**
+     * @return the classLabel
+     */
+    public javax.swing.JLabel getClassLabel() {
+        return classLabel;
+    }
+
+    /**
+     * @param classLabel the classLabel to set
+     */
+    public void setClassLabel(javax.swing.JLabel classLabel) {
+        this.classLabel = classLabel;
+    }
+
+    /**
+     * @return the conLabel
+     */
+    public javax.swing.JLabel getConLabel() {
+        return conLabel;
+    }
+
+    /**
+     * @param conLabel the conLabel to set
+     */
+    public void setConLabel(javax.swing.JLabel conLabel) {
+        this.conLabel = conLabel;
+    }
+
+    /**
+     * @return the conModBox
+     */
+    public javax.swing.JTextField getConModBox() {
+        return conModBox;
+    }
+
+    /**
+     * @param conModBox the conModBox to set
+     */
+    public void setConModBox(javax.swing.JTextField conModBox) {
+        this.conModBox = conModBox;
+    }
+
+    /**
+     * @return the conScoreLabel
+     */
+    public javax.swing.JLabel getConScoreLabel() {
+        return conScoreLabel;
+    }
+
+    /**
+     * @param conScoreLabel the conScoreLabel to set
+     */
+    public void setConScoreLabel(javax.swing.JLabel conScoreLabel) {
+        this.conScoreLabel = conScoreLabel;
+    }
+
+    /**
+     * @return the conValBox
+     */
+    public javax.swing.JTextField getConValBox() {
+        return conValBox;
+    }
+
+    /**
+     * @param conValBox the conValBox to set
+     */
+    public void setConValBox(javax.swing.JTextField conValBox) {
+        this.conValBox = conValBox;
+    }
+
+    /**
+     * @return the dexLabel
+     */
+    public javax.swing.JLabel getDexLabel() {
+        return dexLabel;
+    }
+
+    /**
+     * @param dexLabel the dexLabel to set
+     */
+    public void setDexLabel(javax.swing.JLabel dexLabel) {
+        this.dexLabel = dexLabel;
+    }
+
+    /**
+     * @return the dexModBox
+     */
+    public javax.swing.JTextField getDexModBox() {
+        return dexModBox;
+    }
+
+    /**
+     * @param dexModBox the dexModBox to set
+     */
+    public void setDexModBox(javax.swing.JTextField dexModBox) {
+        this.dexModBox = dexModBox;
+    }
+
+    /**
+     * @return the dexScoreLabel
+     */
+    public javax.swing.JLabel getDexScoreLabel() {
+        return dexScoreLabel;
+    }
+
+    /**
+     * @param dexScoreLabel the dexScoreLabel to set
+     */
+    public void setDexScoreLabel(javax.swing.JLabel dexScoreLabel) {
+        this.dexScoreLabel = dexScoreLabel;
+    }
+
+    /**
+     * @return the dexValBox
+     */
+    public javax.swing.JTextField getDexValBox() {
+        return dexValBox;
+    }
+
+    /**
+     * @param dexValBox the dexValBox to set
+     */
+    public void setDexValBox(javax.swing.JTextField dexValBox) {
+        this.dexValBox = dexValBox;
+    }
+
+    /**
+     * @return the heightBox
+     */
+    public javax.swing.JTextField getHeightBox() {
+        return heightBox;
+    }
+
+    /**
+     * @param heightBox the heightBox to set
+     */
+    public void setHeightBox(javax.swing.JTextField heightBox) {
+        this.heightBox = heightBox;
+    }
+
+    /**
+     * @return the heightLabel
+     */
+    public javax.swing.JLabel getHeightLabel() {
+        return heightLabel;
+    }
+
+    /**
+     * @param heightLabel the heightLabel to set
+     */
+    public void setHeightLabel(javax.swing.JLabel heightLabel) {
+        this.heightLabel = heightLabel;
+    }
+
+    /**
+     * @return the intLabel
+     */
+    public javax.swing.JLabel getIntLabel() {
+        return intLabel;
+    }
+
+    /**
+     * @param intLabel the intLabel to set
+     */
+    public void setIntLabel(javax.swing.JLabel intLabel) {
+        this.intLabel = intLabel;
+    }
+
+    /**
+     * @return the intModBox
+     */
+    public javax.swing.JTextField getIntModBox() {
+        return intModBox;
+    }
+
+    /**
+     * @param intModBox the intModBox to set
+     */
+    public void setIntModBox(javax.swing.JTextField intModBox) {
+        this.intModBox = intModBox;
+    }
+
+    /**
+     * @return the intScoreLabel
+     */
+    public javax.swing.JLabel getIntScoreLabel() {
+        return intScoreLabel;
+    }
+
+    /**
+     * @param intScoreLabel the intScoreLabel to set
+     */
+    public void setIntScoreLabel(javax.swing.JLabel intScoreLabel) {
+        this.intScoreLabel = intScoreLabel;
+    }
+
+    /**
+     * @return the intValBox
+     */
+    public javax.swing.JTextField getIntValBox() {
+        return intValBox;
+    }
+
+    /**
+     * @param intValBox the intValBox to set
+     */
+    public void setIntValBox(javax.swing.JTextField intValBox) {
+        this.intValBox = intValBox;
+    }
+
+    /**
+     * @return the nameLabel
+     */
+    public javax.swing.JLabel getNameLabel() {
+        return nameLabel;
+    }
+
+    /**
+     * @param nameLabel the nameLabel to set
+     */
+    public void setNameLabel(javax.swing.JLabel nameLabel) {
+        this.nameLabel = nameLabel;
+    }
+
+    /**
+     * @return the raceBox
+     */
+    public javax.swing.JTextField getRaceBox() {
+        return raceBox;
+    }
+
+    /**
+     * @param raceBox the raceBox to set
+     */
+    public void setRaceBox(javax.swing.JTextField raceBox) {
+        this.raceBox = raceBox;
+    }
+
+    /**
+     * @return the raceLabel
+     */
+    public javax.swing.JLabel getRaceLabel() {
+        return raceLabel;
+    }
+
+    /**
+     * @param raceLabel the raceLabel to set
+     */
+    public void setRaceLabel(javax.swing.JLabel raceLabel) {
+        this.raceLabel = raceLabel;
+    }
+
+    /**
+     * @return the strLabel
+     */
+    public javax.swing.JLabel getStrLabel() {
+        return strLabel;
+    }
+
+    /**
+     * @param strLabel the strLabel to set
+     */
+    public void setStrLabel(javax.swing.JLabel strLabel) {
+        this.strLabel = strLabel;
+    }
+
+    /**
+     * @return the strModBox
+     */
+    public javax.swing.JTextField getStrModBox() {
+        return strModBox;
+    }
+
+    /**
+     * @param strModBox the strModBox to set
+     */
+    public void setStrModBox(javax.swing.JTextField strModBox) {
+        this.strModBox = strModBox;
+    }
+
+    /**
+     * @return the strScoreLabel
+     */
+    public javax.swing.JLabel getStrScoreLabel() {
+        return strScoreLabel;
+    }
+
+    /**
+     * @param strScoreLabel the strScoreLabel to set
+     */
+    public void setStrScoreLabel(javax.swing.JLabel strScoreLabel) {
+        this.strScoreLabel = strScoreLabel;
+    }
+
+    /**
+     * @return the strValBox
+     */
+    public javax.swing.JTextField getStrValBox() {
+        return strValBox;
+    }
+
+    /**
+     * @param strValBox the strValBox to set
+     */
+    public void setStrValBox(javax.swing.JTextField strValBox) {
+        this.strValBox = strValBox;
+    }
+
+    /**
+     * @return the weightBox
+     */
+    public javax.swing.JTextField getWeightBox() {
+        return weightBox;
+    }
+
+    /**
+     * @param weightBox the weightBox to set
+     */
+    public void setWeightBox(javax.swing.JTextField weightBox) {
+        this.weightBox = weightBox;
+    }
+
+    /**
+     * @return the weightLabel
+     */
+    public javax.swing.JLabel getWeightLabel() {
+        return weightLabel;
+    }
+
+    /**
+     * @param weightLabel the weightLabel to set
+     */
+    public void setWeightLabel(javax.swing.JLabel weightLabel) {
+        this.weightLabel = weightLabel;
+    }
+
+    /**
+     * @return the wisLabel
+     */
+    public javax.swing.JLabel getWisLabel() {
+        return wisLabel;
+    }
+
+    /**
+     * @param wisLabel the wisLabel to set
+     */
+    public void setWisLabel(javax.swing.JLabel wisLabel) {
+        this.wisLabel = wisLabel;
+    }
+
+    /**
+     * @return the wisModBox
+     */
+    public javax.swing.JTextField getWisModBox() {
+        return wisModBox;
+    }
+
+    /**
+     * @param wisModBox the wisModBox to set
+     */
+    public void setWisModBox(javax.swing.JTextField wisModBox) {
+        this.wisModBox = wisModBox;
+    }
+
+    /**
+     * @return the wisScoreLabel
+     */
+    public javax.swing.JLabel getWisScoreLabel() {
+        return wisScoreLabel;
+    }
+
+    /**
+     * @param wisScoreLabel the wisScoreLabel to set
+     */
+    public void setWisScoreLabel(javax.swing.JLabel wisScoreLabel) {
+        this.wisScoreLabel = wisScoreLabel;
+    }
+
+    /**
+     * @return the wisValBox
+     */
+    public javax.swing.JTextField getWisValBox() {
+        return wisValBox;
+    }
+
+    /**
+     * @param wisValBox the wisValBox to set
+     */
+    public void setWisValBox(javax.swing.JTextField wisValBox) {
+        this.wisValBox = wisValBox;
+    }
+
+    /**
+     * @return the back
+     */
+    public javax.swing.JButton getBack() {
+        return back;
+    }
+
+    /**
+     * @param back the back to set
+     */
+    public void setBack(javax.swing.JButton back) {
+        this.back = back;
+    }
+
+    /**
+     * @return the next
+     */
+    public javax.swing.JButton getNext() {
+        return next;
+    }
+
+    /**
+     * @param next the next to set
+     */
+    public void setNext(javax.swing.JButton next) {
+        this.next = next;
     }
 }

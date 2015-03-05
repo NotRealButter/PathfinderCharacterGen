@@ -72,8 +72,4 @@ public class SkillSet
         swim= new Skill("swim", 32);
         useMagicDevice= new Skill("useMagicDevice", 33);
     }
-            
-            
-            
-    
 }

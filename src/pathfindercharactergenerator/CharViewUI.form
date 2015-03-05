@@ -31,18 +31,18 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="74" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                  <Component id="intLabel" min="-2" max="-2" attributes="0"/>
+                  <Component id="conLabel" min="-2" max="-2" attributes="0"/>
+                  <Component id="dexLabel" min="-2" max="-2" attributes="0"/>
+                  <Component id="strLabel" min="-2" max="-2" attributes="0"/>
+                  <Component id="weightLabel" min="-2" max="-2" attributes="0"/>
+                  <Component id="heightLabel" min="-2" max="-2" attributes="0"/>
+                  <Component id="alignmentLabel" min="-2" max="-2" attributes="0"/>
+                  <Component id="classLabel" min="-2" max="-2" attributes="0"/>
                   <Component id="nameLabel" alignment="1" min="-2" max="-2" attributes="0"/>
                   <Component id="raceLabel" alignment="1" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel10" alignment="1" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel9" alignment="1" min="-2" max="-2" attributes="0"/>
+                  <Component id="chaLabel" alignment="1" min="-2" max="-2" attributes="0"/>
+                  <Component id="wisLabel" alignment="1" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
@@ -57,46 +57,52 @@
                           <Group type="102" attributes="0">
                               <Component id="chaValBox" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
-                              <Component id="jLabel16" min="-2" max="-2" attributes="0"/>
+                              <Component id="chaScoreLabel" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="wisValBox" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
-                              <Component id="jLabel15" min="-2" max="-2" attributes="0"/>
+                              <Component id="wisScoreLabel" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="intValBox" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
-                              <Component id="jLabel14" min="-2" max="-2" attributes="0"/>
+                              <Component id="intScoreLabel" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
                               <Component id="conValBox" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
-                              <Component id="jLabel13" min="-2" max="-2" attributes="0"/>
+                              <Component id="conScoreLabel" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
                               <Component id="dexValBox" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
-                              <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
+                              <Component id="dexScoreLabel" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
                               <Component id="strValBox" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
-                              <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
+                              <Component id="strScoreLabel" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jTextField14" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField15" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField16" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField17" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField18" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField19" min="-2" max="-2" attributes="0"/>
+                          <Component id="strModBox" min="-2" max="-2" attributes="0"/>
+                          <Component id="dexModBox" min="-2" max="-2" attributes="0"/>
+                          <Component id="conModBox" min="-2" max="-2" attributes="0"/>
+                          <Component id="intModBox" min="-2" max="-2" attributes="0"/>
+                          <Component id="wisModBox" min="-2" max="-2" attributes="0"/>
+                          <Component id="chaModBox" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace pref="896" max="32767" attributes="0"/>
+              <EmptySpace pref="903" max="32767" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+              <Component id="next" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
+              <Component id="back" min="-2" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -115,67 +121,71 @@
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="classLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="classBox" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="alignmentLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="alignmentBox" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="heightLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="heightBox" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="weightLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="weightBox" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="strLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="strValBox" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jTextField14" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="strScoreLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="strModBox" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="dexLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="dexValBox" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel12" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jTextField15" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="dexScoreLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="dexModBox" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="conLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="conValBox" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel13" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jTextField16" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="conScoreLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="conModBox" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="intLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="intValBox" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel14" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jTextField17" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="intScoreLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="intModBox" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="wisLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="wisValBox" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel15" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jTextField18" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="wisScoreLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="wisModBox" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="chaLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="chaValBox" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel16" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jTextField19" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="chaScoreLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="chaModBox" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="356" max="32767" attributes="0"/>
+              <EmptySpace pref="256" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="back" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="next" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
           </Group>
       </Group>
     </DimensionLayout>
@@ -191,52 +201,52 @@
         <Property name="text" type="java.lang.String" value="Race:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel1">
+    <Component class="javax.swing.JLabel" name="classLabel">
       <Properties>
         <Property name="text" type="java.lang.String" value="Class:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel2">
+    <Component class="javax.swing.JLabel" name="alignmentLabel">
       <Properties>
         <Property name="text" type="java.lang.String" value="Alignment:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel3">
+    <Component class="javax.swing.JLabel" name="heightLabel">
       <Properties>
         <Property name="text" type="java.lang.String" value="Height:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel4">
+    <Component class="javax.swing.JLabel" name="weightLabel">
       <Properties>
         <Property name="text" type="java.lang.String" value="Weight:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel5">
+    <Component class="javax.swing.JLabel" name="strLabel">
       <Properties>
         <Property name="text" type="java.lang.String" value="Strength:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel6">
+    <Component class="javax.swing.JLabel" name="dexLabel">
       <Properties>
         <Property name="text" type="java.lang.String" value="Dexterity:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel7">
+    <Component class="javax.swing.JLabel" name="conLabel">
       <Properties>
         <Property name="text" type="java.lang.String" value="Constitution:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel8">
+    <Component class="javax.swing.JLabel" name="intLabel">
       <Properties>
         <Property name="text" type="java.lang.String" value="Intelligence"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel9">
+    <Component class="javax.swing.JLabel" name="wisLabel">
       <Properties>
         <Property name="text" type="java.lang.String" value="Wisdom:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel10">
+    <Component class="javax.swing.JLabel" name="chaLabel">
       <Properties>
         <Property name="text" type="java.lang.String" value="Charisma:"/>
       </Properties>
@@ -301,64 +311,92 @@
         <Property name="text" type="java.lang.String" value="jTextField12"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel11">
+    <Component class="javax.swing.JLabel" name="strScoreLabel">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Str Score:"/>
+        <Property name="text" type="java.lang.String" value="Str Mod:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel12">
+    <Component class="javax.swing.JLabel" name="dexScoreLabel">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Dex Score:"/>
+        <Property name="text" type="java.lang.String" value="Dex Mod:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel13">
+    <Component class="javax.swing.JLabel" name="conScoreLabel">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Con Score:"/>
+        <Property name="text" type="java.lang.String" value="Con Mod:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel14">
+    <Component class="javax.swing.JLabel" name="intScoreLabel">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Int Score:"/>
+        <Property name="text" type="java.lang.String" value="Int Mod:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel15">
+    <Component class="javax.swing.JLabel" name="wisScoreLabel">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Wis Score:"/>
+        <Property name="text" type="java.lang.String" value="Wis Mod:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel16">
+    <Component class="javax.swing.JLabel" name="chaScoreLabel">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Cha Score:"/>
+        <Property name="text" type="java.lang.String" value="Cha Mod:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField14">
+    <Component class="javax.swing.JTextField" name="strModBox">
       <Properties>
         <Property name="text" type="java.lang.String" value="jTextField14"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField15">
+    <Component class="javax.swing.JTextField" name="dexModBox">
       <Properties>
         <Property name="text" type="java.lang.String" value="jTextField15"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField16">
+    <Component class="javax.swing.JTextField" name="conModBox">
       <Properties>
         <Property name="text" type="java.lang.String" value="jTextField16"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField17">
+    <Component class="javax.swing.JTextField" name="intModBox">
       <Properties>
         <Property name="text" type="java.lang.String" value="jTextField17"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField18">
+    <Component class="javax.swing.JTextField" name="wisModBox">
       <Properties>
         <Property name="text" type="java.lang.String" value="jTextField18"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField19">
+    <Component class="javax.swing.JTextField" name="chaModBox">
       <Properties>
         <Property name="text" type="java.lang.String" value="jTextField19"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="next">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Next"/>
+        <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[100, 100]"/>
+        </Property>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[100, 100]"/>
+        </Property>
+        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[100, 100]"/>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="back">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Back"/>
+        <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[100, 100]"/>
+        </Property>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[100, 100]"/>
+        </Property>
+        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[100, 100]"/>
+        </Property>
       </Properties>
     </Component>
   </SubComponents>

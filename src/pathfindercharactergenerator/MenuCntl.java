@@ -32,6 +32,10 @@ public class MenuCntl implements ActionListener
         charCreateCntl.inGameClassUI.getNext().addActionListener(this);
         charCreateCntl.raceUI.getNext().addActionListener(this);
         charCreateCntl.raceUI.getBack().addActionListener(this);
+        charCreateCntl.abilityScoreUI.getNext().addActionListener(this);
+        charViewCntl.charViewUI.getNext().addActionListener(this);
+        charViewCntl.charViewUI.getBack().addActionListener(this);
+
     }
     
     public void removePanels()
@@ -52,11 +56,11 @@ public class MenuCntl implements ActionListener
     public void actionPerformed(ActionEvent e) 
     {
         Object select = e.getSource();
-        
+        charViewCntl.updateView();
     //Handles controls from the main menu**************************************
         if(select == mainMenu.charCreateButton)
         {
-           switchPanel(mainMenu, charCreateCntl.charInfoUI);
+            switchPanel(mainMenu, charCreateCntl.charInfoUI);
         }
         if (select== mainMenu.charViewButton)
         {
@@ -66,15 +70,18 @@ public class MenuCntl implements ActionListener
         {
             switchPanel(charCreateCntl.charInfoUI, charCreateCntl.raceUI);
             charCreateCntl.onCreateNextClick();
-            charViewCntl.updateView();
         }
         if (select == charCreateCntl.raceUI.next)
         {
             switchPanel(charCreateCntl.raceUI,charCreateCntl.inGameClassUI);
+                    charCreateCntl.onRaceSaveClick();
+
         }
         if(select == charCreateCntl.raceUI.back)
         {
             switchPanel(charCreateCntl.raceUI,charCreateCntl.charInfoUI);
+                    charCreateCntl.onRaceSaveClick();
+
         }
         if(select == charCreateCntl.charInfoUI.back)
         {
@@ -87,16 +94,27 @@ public class MenuCntl implements ActionListener
         }
         if (select == charCreateCntl.abilityScoreUI.getNext())
         {
-            switchPanel(charCreateCntl.abilityScoreUI, charCreateCntl.charInfoUI);
+            switchPanel(charCreateCntl.abilityScoreUI, charViewCntl.charViewUI);
         }
         if (select == charCreateCntl.inGameClassUI.next)
-        {
+        {   
+            charCreateCntl.onClassSaveClick();
             switchPanel(charCreateCntl.inGameClassUI, charCreateCntl.abilityScoreUI);
         }
         if (select == charCreateCntl.inGameClassUI.back)
         {
+            charCreateCntl.onClassSaveClick();
             switchPanel(charCreateCntl.inGameClassUI, charCreateCntl.raceUI);
         }   
+        if(select==charViewCntl.charViewUI.getNext())
+        {
+            charViewCntl.charViewUI.getNext().setText("Not Yet Functional, sorry");
+        }
+        if(select==charViewCntl.charViewUI.getBack())
+        {
+            switchPanel(charViewCntl.charViewUI, mainMenu);
+        }
+
     }
 
    
